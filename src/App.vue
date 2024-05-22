@@ -1,13 +1,16 @@
 <template>
-  <ZzimIcon />
+  <ZzimIcon is-zzim-prop="false" />
+  <CheckBoxIcon />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import ZzimIcon from './components/zzim/ZzimIcon.vue';
+import CheckBoxIcon from "@/components/checkbox/CheckBoxIcon.vue";
 
 @Options({
   components: {
+    CheckBoxIcon,
     ZzimIcon,
   },
 })
