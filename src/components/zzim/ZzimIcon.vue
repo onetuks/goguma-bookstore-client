@@ -14,16 +14,17 @@ const convertDProperty = () => {
 </script>
 
 <template>
-  <div class="zzim" @click="convertDProperty">
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          :d="zzimed ? ACTIVE_D_PROPERTY : INACTIVE_D_PROPERTY"
-          fill="#6A3E37"
-      />
-    </svg>
-  </div>
+  <svg
+      class="zzim"
+      xmlns="http://www.w3.org/2000/svg"
+      @click="convertDProperty">
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        :d="zzimed ? ACTIVE_D_PROPERTY : INACTIVE_D_PROPERTY"
+        fill="#6A3E37"
+    />
+  </svg>
 </template>
 
 <style scoped>
