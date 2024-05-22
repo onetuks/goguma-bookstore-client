@@ -11,7 +11,9 @@
     </div>
     <div>
       <h5>대버튼</h5>
-
+      <BigButton button-name='버튼' button-state="default" />
+      <BigButton button-name='버튼' button-state="disabled" />
+      <BigButton button-name='버튼' button-state="emphasis" />
     </div>
     <div>
       <h5>구독버튼</h5>
@@ -37,9 +39,11 @@ import { Options, Vue } from 'vue-class-component';
 import CheckBox from "@/components/checkbox/CheckBox.vue";
 import SmallButton from "@/components/buttons/SmallButton.vue";
 import ZzimKong from "@/components/zzim/ZzimKong.vue";
+import BigButton from "@/components/buttons/BigButton.vue";
 
 @Options({
   components: {
+    BigButton,
     ZzimKong,
     SmallButton,
     CheckBox,
@@ -49,8 +53,8 @@ export default class App extends Vue {}
 </script>
 
 <style>
-@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
-@import '@/assets/styles/var.css';
+@import '@/assets/fonts.css';
+@import '@/assets/var.css';
 #app {
   font-family: 'NanumSquare', sans-serif;
   -webkit-font-smoothing: antialiased;
