@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ref} from "vue";
 
-const props = withDefaults(defineProps<{ isChecked: boolean }>(), {isChecked: true});
+const props = withDefaults(defineProps<{ isChecked: boolean }>(), {isChecked: false});
 
 let checked = ref<boolean>(props.isChecked);
 
