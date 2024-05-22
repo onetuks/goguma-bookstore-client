@@ -15,7 +15,7 @@ const convertDProperty = () => {
 
 <template>
   <svg
-      class="zzim"
+      class="property-wrapper"
       xmlns="http://www.w3.org/2000/svg"
       @click="convertDProperty">
     <path
@@ -29,12 +29,10 @@ const convertDProperty = () => {
 
 <style scoped>
 
-.zzim * {
-  box-sizing: border-box;
-  width: 26px;
+.property-wrapper {
+  background-size: 100% 100%;
   height: 26px;
-  position: relative;
-  overflow: visible;
+  width: 26px;
 }
 
 </style>

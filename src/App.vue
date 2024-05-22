@@ -1,20 +1,48 @@
 <template>
-  <ZzimIcon :is-zzim='true' />
-  <CheckBoxIcon :is-checked='true' />
-  <SmallButton button-name='버튼' button-state="default" />
+  <h1>공용 컴포넌트</h1>
+  <hr>
+  <div>
+    <h4>버튼</h4>
+    <div>
+      <h5>소버튼</h5>
+      <SmallButton button-name='버튼' button-state="default" />
+      <SmallButton button-name='버튼' button-state="disabled" />
+      <SmallButton button-name='버튼' button-state="emphasis" />
+    </div>
+    <div>
+      <h5>대버튼</h5>
+
+    </div>
+    <div>
+      <h5>구독버튼</h5>
+
+    </div>
+  </div>
+  <hr>
+  <div>
+    <h4>찜콩</h4>
+    <ZzimKong :is-zzim='true' />
+    <ZzimKong :is-zzim='false' />
+  </div>
+  <hr>
+  <div>
+    <h4>체크박스</h4>
+    <CheckBox :is-checked='true' />
+    <CheckBox :is-checked='false' />
+  </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import ZzimIcon from './components/zzim/ZzimIcon.vue';
-import CheckBoxIcon from "@/components/checkbox/CheckBoxIcon.vue";
-import SmallButton from "@/components/buttons/small/SmallButton.vue";
+import CheckBox from "@/components/checkbox/CheckBox.vue";
+import SmallButton from "@/components/buttons/SmallButton.vue";
+import ZzimKong from "@/components/zzim/ZzimKong.vue";
 
 @Options({
   components: {
+    ZzimKong,
     SmallButton,
-    CheckBoxIcon,
-    ZzimIcon,
+    CheckBox,
   },
 })
 export default class App extends Vue {}
