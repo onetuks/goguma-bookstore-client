@@ -17,7 +17,8 @@
     </div>
     <div>
       <h5>구독버튼</h5>
-
+      <SubscribeButton :is-subscribed='true' />
+      <SubscribeButton :is-subscribed='false' />
     </div>
   </div>
   <hr>
@@ -36,17 +37,19 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
+import ZzimKong from "@/components/zzim/ZzimKong.vue";
 import CheckBox from "@/components/checkbox/CheckBox.vue";
 import SmallButton from "@/components/buttons/SmallButton.vue";
-import ZzimKong from "@/components/zzim/ZzimKong.vue";
 import BigButton from "@/components/buttons/BigButton.vue";
+import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
 
 @Options({
   components: {
-    BigButton,
     ZzimKong,
-    SmallButton,
     CheckBox,
+    SmallButton,
+    BigButton,
+    SubscribeButton
   },
 })
 export default class App extends Vue {}
