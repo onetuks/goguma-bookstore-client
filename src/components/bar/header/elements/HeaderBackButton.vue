@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { useRouter } from "vue-router";
+<script lang="ts" setup>
+import {useRouter} from "vue-router";
 
 const returnBack = () => {
   useRouter().back();
@@ -10,10 +10,10 @@ const returnBack = () => {
   <div @click="returnBack">
     <svg
         class="frame-860"
-        width="50"
+        fill="none"
         height="50"
         viewBox="0 0 50 50"
-        fill="none"
+        width="50"
         xmlns="http://www.w3.org/2000/svg"
     >
       <path

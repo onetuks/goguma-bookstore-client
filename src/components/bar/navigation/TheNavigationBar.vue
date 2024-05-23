@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import MenuNavigation from "@/components/bar/navigation/elements/MenuNavigation.vue";
-import HistoryNavigation from "@/components/bar/navigation/elements/HistoryNavigation.vue";
-import MyPageNavigation from "@/components/bar/navigation/elements/MyPageNavigation.vue";
-import FavoriteNavigation from "@/components/bar/navigation/elements/FavoriteNavigation.vue";
-import HomeNavigation from "@/components/bar/navigation/elements/HomeNavigation.vue";
+<script lang="ts" setup>
+import NavigationMenuButton from "@/components/bar/navigation/elements/NavigationMenuButton.vue";
+import NavigationHistoryButton from "@/components/bar/navigation/elements/NavigationHistoryButton.vue";
+import NavigationMyPageButton from "@/components/bar/navigation/elements/NavigationMyPageButton.vue";
+import NavigationFavoriteButton from "@/components/bar/navigation/elements/NavigationFavoriteButton.vue";
+import NavigationHomeButton from "@/components/bar/navigation/elements/NavigationHomeButton.vue";
 import {ref} from "vue";
 
 type NavigationType = 'menu' | 'history' | 'mypage' | 'favorite' | 'home';
@@ -17,23 +17,23 @@ const handleClick = (navigationTypeName: NavigationType) => {
 
 <template>
   <div class="navigation">
-    <MenuNavigation
+    <NavigationMenuButton
         :active="activeNavigation === 'menu'"
         @click="() => handleClick('menu')"
     />
-    <HistoryNavigation
+    <NavigationHistoryButton
         :active="activeNavigation === 'history'"
         @click="() => handleClick('history')"
     />
-    <MyPageNavigation
+    <NavigationMyPageButton
         :active="activeNavigation === 'mypage'"
         @click="() => handleClick('mypage')"
     />
-    <FavoriteNavigation
+    <NavigationFavoriteButton
         :active="activeNavigation === 'favorite'"
         @click="() => handleClick('favorite')"
     />
-    <HomeNavigation
+    <NavigationHomeButton
         :active="activeNavigation === 'home'"
         @click="() => handleClick('home')"
     />

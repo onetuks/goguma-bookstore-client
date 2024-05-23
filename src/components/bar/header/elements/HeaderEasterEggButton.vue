@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import {ref} from "vue";
 import {useRouter} from "vue-router";
 
 let clickCount = ref<number>(0);
 
 const moveToEasterEggPage = () => {
-  clickCount.value ++;
+  clickCount.value++;
 
   if (clickCount.value >= 10) {
     useRouter().push('/easter-egg')

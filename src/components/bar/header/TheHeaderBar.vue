@@ -1,8 +1,8 @@
-<script setup lang="ts">
-import BackButton from "@/components/bar/header/elements/BackButton.vue";
-import EasterEggButton from "@/components/bar/header/elements/EasterEggButton.vue";
-import SearchButton from "@/components/bar/header/elements/SearchButton.vue";
-import ShoppingBasketButton from "@/components/bar/header/elements/ShoppingBasketButton.vue";
+<script lang="ts" setup>
+import HeaderBackButton from "@/components/bar/header/elements/HeaderBackButton.vue";
+import HeaderEasterEggButton from "@/components/bar/header/elements/HeaderEasterEggButton.vue";
+import HeaderSearchButton from "@/components/bar/header/elements/HeaderSearchButton.vue";
+import HeaderShoppingBasketButton from "@/components/bar/header/elements/HeaderShoppingBasketButton.vue";
 
 defineProps<{
   pageTitle: string,
@@ -11,11 +11,11 @@ defineProps<{
 
 <template>
   <div class="property-1">
-    <BackButton />
-    <EasterEggButton />
+    <HeaderBackButton/>
+    <HeaderEasterEggButton/>
     <div class="header-bat-title">{{ pageTitle }}</div>
-    <SearchButton />
-    <ShoppingBasketButton />
+    <HeaderSearchButton/>
+    <HeaderShoppingBasketButton/>
   </div>
 
 </template>
@@ -25,6 +25,7 @@ defineProps<{
 .property-1 * {
   box-sizing: border-box;
 }
+
 .property-1 {
   border-style: solid;
   border-color: var(--color-border-tertiary, #756357);
@@ -37,6 +38,7 @@ defineProps<{
   height: 50px;
   position: relative;
 }
+
 .header-bat-title {
   color: #000000;
   text-align: center;

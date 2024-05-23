@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type status = '배송준비중' | '배송중' | '배송완료' | '주문완료';
 
 defineProps<{
@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <div class="property-wrapper">
     <div class="delivery-status">
-      {{status}}
+      {{ status }}
     </div>
   </div>
 

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import {ref} from "vue";
 
 const props = withDefaults(defineProps<{ isZzim: boolean; }>(), {isZzim: false,});
@@ -19,10 +19,10 @@ const convertDProperty = () => {
       xmlns="http://www.w3.org/2000/svg"
       @click="convertDProperty">
     <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
         :d="zzimed ? ACTIVE_D_PROPERTY : INACTIVE_D_PROPERTY"
+        clip-rule="evenodd"
         fill="#6A3E37"
+        fill-rule="evenodd"
     />
   </svg>
 </template>

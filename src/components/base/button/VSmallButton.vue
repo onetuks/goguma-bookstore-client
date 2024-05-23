@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import {ButtonState} from "@/components/buttons/ButtonState";
+<script lang="ts" setup>
+import {ButtonState} from "@/components/base/button/ButtonState";
 
 defineProps<{
   buttonName: string,
@@ -10,8 +10,8 @@ defineProps<{
 
 <template>
   <button
-      class="property-wrapper"
       :class="buttonState"
+      class="property-wrapper"
   >
     {{ buttonName }}
   </button>

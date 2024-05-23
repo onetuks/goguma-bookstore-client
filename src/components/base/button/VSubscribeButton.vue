@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 defineProps<{
   isSubscribed: boolean
 }>();
@@ -6,10 +6,10 @@ defineProps<{
 
 <template>
   <button
-      class="subscribe-button"
       :class="isSubscribed ? 'active' : 'inactive'"
+      class="subscribe-button"
   >
-    {{isSubscribed ? '구독중' : '구독하기'}}
+    {{ isSubscribed ? '구독중' : '구독하기' }}
   </button>
 </template>
 
@@ -34,9 +34,11 @@ defineProps<{
   font-size: var(--font-size-14);
   font-weight: 700;
 }
+
 .subscribe-button.active {
   border-color: var(--color-button-primary, #e1ddcb);
 }
+
 .subscribe-button.inactive {
   border-color: var(--color-border-tertiary, #756357);
 }

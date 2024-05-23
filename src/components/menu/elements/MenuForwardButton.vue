@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 </script>
 
@@ -6,10 +6,10 @@
   <div class="frame-881">
     <svg
         class="div2"
-        width="10"
+        fill="none"
         height="18"
         viewBox="0 0 10 18"
-        fill="none"
+        width="10"
         xmlns="http://www.w3.org/2000/svg"
     >
       <path

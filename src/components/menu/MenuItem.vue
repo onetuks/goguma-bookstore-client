@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import ForwardButton from "@/components/menu/elements/ForwardButton.vue";
+<script lang="ts" setup>
+import ForwardButton from "@/components/menu/elements/MenuForwardButton.vue";
 import {useRouter} from "vue-router";
 
 type MenuType = '서평관리';

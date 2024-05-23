@@ -1,17 +1,17 @@
-<script setup lang="ts">
-import BackButton from "@/components/bar/header/elements/BackButton.vue";
-import AuthorMyPageButton from "@/components/bar/header/elements/AuthorMyPageButton.vue";
-import AlarmIcon from "@/components/alarm/AlarmIcon.vue";
+<script lang="ts" setup>
+import HeaderBackButton from "@/components/bar/header/elements/HeaderBackButton.vue";
+import ScmHeaderMyPageButton from "@/components/bar/header/elements/ScmHeaderMyPageButton.vue";
+import HeaderAlarmIcon from "@/components/alarm/VAlarmIcon.vue";
 </script>
 
 <template>
   <div class="property-1-variant-2">
-    <BackButton/>
-    <AlarmIcon :has-alarm='true'/>
+    <HeaderBackButton/>
+    <HeaderAlarmIcon :has-alarm='true'/>
     <div class="div3">
       <div class="div4">유통정보시스템</div>
     </div>
-    <AuthorMyPageButton/>
+    <ScmHeaderMyPageButton/>
   </div>
 
 </template>

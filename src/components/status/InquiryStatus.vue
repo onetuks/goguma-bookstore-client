@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type Status = '미답변' | '답변완료';
 
 defineProps<{
@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div class="property-1">
-    <div class="div">{{status}}</div>
+    <div class="div">{{ status }}</div>
   </div>
 </template>
 
@@ -17,11 +17,13 @@ defineProps<{
 .property-1 * {
   box-sizing: border-box;
 }
+
 .property-1 {
   width: auto;
   height: 12px;
   position: relative;
 }
+
 .div {
   color: var(--color-text-black);
   text-align: left;

@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import {ButtonState} from "@/components/buttons/ButtonState";
+<script lang="ts" setup>
+import {ButtonState} from "@/components/base/button/ButtonState";
 
 defineProps<{
   buttonName: string,
@@ -9,8 +9,8 @@ defineProps<{
 
 <template>
   <button
-      class="big-button"
       :class="buttonState"
+      class="big-button"
   >
     {{ buttonName }}
   </button>
@@ -23,7 +23,7 @@ defineProps<{
   border-radius: 15px;
   border-color: var(--color-button-primary, #e1ddcb);
   padding: 5px 10px 5px 10px;
-  gap:10px;
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

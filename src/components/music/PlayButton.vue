@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 </script>
 
@@ -6,10 +6,10 @@
   <div class="play-button">
     <svg
         class="polygon-2"
-        width="16"
+        fill="none"
         height="16"
         viewBox="0 0 16 16"
-        fill="none"
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -26,6 +26,7 @@
 .play-button * {
   box-sizing: border-box;
 }
+
 .play-button {
   background: #a9a9a9;
   border-radius: 20px;
@@ -38,6 +39,7 @@
   height: 40px;
   position: relative;
 }
+
 .polygon-2 {
   flex-shrink: 0;
   width: 16px;

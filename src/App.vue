@@ -80,18 +80,18 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import ZzimKong from "@/components/zzim/ZzimKong.vue";
-import CheckBox from "@/components/checkbox/CheckBox.vue";
-import SmallButton from "@/components/button/SmallButton.vue";
-import BigButton from "@/components/button/BigButton.vue";
-import SubscribeButton from "@/components/button/SubscribeButton.vue";
-import NavigationBar from "@/components/bar/navigation/NavigationBar.vue";
+import ZzimKong from "@/components/base/zzim/VZzimKong.vue";
+import CheckBox from "@/components/base/checkbox/VCheckBox.vue";
+import SmallButton from "@/components/base/button/VSmallButton.vue";
+import BigButton from "@/components/base/button/VBigButton.vue";
+import SubscribeButton from "@/components/base/button/VSubscribeButton.vue";
+import NavigationBar from "@/components/bar/navigation/TheNavigationBar.vue";
 import DeliveryStatus from "@/components/status/DeliveryStatus.vue";
 import PlayButton from "@/components/music/PlayButton.vue";
-import AlarmIcon from "@/components/alarm/AlarmIcon.vue";
-import HeaderBar from "@/components/bar/header/HeaderBar.vue";
-import ScmHeaderBar from "@/components/bar/header/ScmHeaderBar.vue";
-import FnAStatus from "@/components/status/FnAStatus.vue";
+import AlarmIcon from "@/components/alarm/VAlarmIcon.vue";
+import HeaderBar from "@/components/bar/header/TheHeaderBar.vue";
+import ScmHeaderBar from "@/components/bar/header/TheScmHeaderBar.vue";
+import FnAStatus from "@/components/status/InquiryStatus.vue";
 import MenuItem from "@/components/menu/MenuItem.vue";
 import ReviewStars from "@/components/review/ReviewStars.vue";
 
