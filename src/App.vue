@@ -1,6 +1,10 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>별점</h4>
+    <ReviewStars/>
+  </div>
+  <div>
     <h4>메뉴 리스트</h4>
     <MenuItem menu-type="서평관리"/>
   </div>
@@ -78,9 +82,9 @@
 import {Options, Vue} from 'vue-class-component';
 import ZzimKong from "@/components/zzim/ZzimKong.vue";
 import CheckBox from "@/components/checkbox/CheckBox.vue";
-import SmallButton from "@/components/buttons/SmallButton.vue";
-import BigButton from "@/components/buttons/BigButton.vue";
-import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
+import SmallButton from "@/components/button/SmallButton.vue";
+import BigButton from "@/components/button/BigButton.vue";
+import SubscribeButton from "@/components/button/SubscribeButton.vue";
 import NavigationBar from "@/components/bar/navigation/NavigationBar.vue";
 import DeliveryStatus from "@/components/status/DeliveryStatus.vue";
 import PlayButton from "@/components/music/PlayButton.vue";
@@ -89,9 +93,11 @@ import HeaderBar from "@/components/bar/header/HeaderBar.vue";
 import ScmHeaderBar from "@/components/bar/header/ScmHeaderBar.vue";
 import FnAStatus from "@/components/status/FnAStatus.vue";
 import MenuItem from "@/components/menu/MenuItem.vue";
+import ReviewStars from "@/components/review/ReviewStars.vue";
 
 @Options({
   components: {
+    ReviewStars,
     MenuItem,
     FnAStatus,
     ScmHeaderBar,
