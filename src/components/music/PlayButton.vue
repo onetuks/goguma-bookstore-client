@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="div">
+  <div class="play-button">
     <svg
         class="polygon-2"
         width="16"
@@ -22,11 +22,11 @@
 </template>
 
 <style scoped>
-.div,
-.div * {
+.play-button,
+.play-button * {
   box-sizing: border-box;
 }
-.div {
+.play-button {
   background: #a9a9a9;
   border-radius: 20px;
   display: flex;

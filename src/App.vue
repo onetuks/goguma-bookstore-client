@@ -1,6 +1,10 @@
 <template>
   <h1>공용 컴포넌트</h1>
-  <div></div>
+  <div style="background-color: gray">
+    <h4>알림 아이콘</h4>
+    <AlarmIcon :has-alarm='true' />
+    <AlarmIcon :has-alarm='false' />
+  </div>
   <div>
     <h4>플레이버튼</h4>
     <PlayButton />
@@ -64,9 +68,11 @@ import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
 import NavigationBar from "@/components/navigation/NavigationBar.vue";
 import DeliveryStatus from "@/components/delivery/DeliveryStatus.vue";
 import PlayButton from "@/components/music/PlayButton.vue";
+import AlarmIcon from "@/components/alarm/AlarmIcon.vue";
 
 @Options({
   components: {
+    AlarmIcon,
     PlayButton,
     DeliveryStatus,
     ZzimKong,
