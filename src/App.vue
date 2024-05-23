@@ -1,11 +1,16 @@
 <template>
   <h1>공용 컴포넌트</h1>
+  <div>
+    <h4>메뉴 리스트</h4>
+    <MenuItem menu-type="서평관리"/>
+  </div>
   <div style="background-color: lightgray">
     <h4>독자용 상단바</h4>
     <HeaderBar page-title="여기에 제목"/>
     <hr>
     <h4>유통시스템 상단바</h4>
     <ScmHeaderBar/>
+    <hr>
   </div>
   <div style="background-color: gray">
     <h4>알림 아이콘</h4>
@@ -83,9 +88,11 @@ import AlarmIcon from "@/components/alarm/AlarmIcon.vue";
 import HeaderBar from "@/components/bar/header/HeaderBar.vue";
 import ScmHeaderBar from "@/components/bar/header/ScmHeaderBar.vue";
 import FnAStatus from "@/components/status/FnAStatus.vue";
+import MenuItem from "@/components/menu/MenuItem.vue";
 
 @Options({
   components: {
+    MenuItem,
     FnAStatus,
     ScmHeaderBar,
     HeaderBar,

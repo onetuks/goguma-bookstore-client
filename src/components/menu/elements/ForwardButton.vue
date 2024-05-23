@@ -1,0 +1,45 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <div class="frame-881">
+    <svg
+        class="div2"
+        width="10"
+        height="18"
+        viewBox="0 0 10 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+          d="M9.56067 8.96961L1.56067 0.969613L0.500011 2.03027L7.43935 8.96961L0.439349 15.9696L1.50001 17.0303L9.56067 8.96961Z"
+          fill="black"
+      />
+    </svg>
+  </div>
+</template>
+
+<style scoped>
+
+.frame-881 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.div2 {
+  flex-shrink: 0;
+  width: 9px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+
+</style>
