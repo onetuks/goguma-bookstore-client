@@ -35,7 +35,7 @@ defineProps<{
 
 .property-wrapper.default {
   border-color: var(--color-button-primary);
-  color: var(--color-text-primary);
+  color: var(--color-text-black);
 }
 
 .property-wrapper.disabled {
@@ -45,6 +45,6 @@ defineProps<{
 
 .property-wrapper.emphasis {
   border-color: var(--color-button-secondary);
-  color: var(--color-text-primary);
+  color: var(--color-text-black);
 }
 </style>

@@ -31,7 +31,7 @@ defineProps<{
   width: 100%;
   position: relative;
   text-align: center;
-  color: var(--color-text-primary, #000000);
+  color: var(--color-text-black, #000000);
   font-family: var(--font-family-extra-bold, 'NanumSquareExtraBold'), sans-serif;
   font-size: var(--font-size-16, 16px);
 }

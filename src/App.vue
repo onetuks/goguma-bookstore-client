@@ -2,6 +2,11 @@
   <h1>공용 컴포넌트</h1>
   <hr>
   <div>
+    <h4>네비게이션바</h4>
+    <NavigationBar />
+  </div>
+  <hr>
+  <div>
     <h4>버튼</h4>
     <div>
       <h5>소버튼</h5>
@@ -42,6 +47,7 @@ import CheckBox from "@/components/checkbox/CheckBox.vue";
 import SmallButton from "@/components/buttons/SmallButton.vue";
 import BigButton from "@/components/buttons/BigButton.vue";
 import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
+import NavigationBar from "@/components/navigation/NavigationBar.vue";
 
 @Options({
   components: {
@@ -49,7 +55,8 @@ import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
     CheckBox,
     SmallButton,
     BigButton,
-    SubscribeButton
+    SubscribeButton,
+    NavigationBar,
   },
 })
 export default class App extends Vue {}
