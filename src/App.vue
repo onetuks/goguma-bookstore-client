@@ -2,6 +2,14 @@
   <h1>공용 컴포넌트</h1>
   <hr>
   <div>
+    <h4>배송상태</h4>
+    <DeliveryStatus status="배송준비중" />
+    <DeliveryStatus status="배송중" />
+    <DeliveryStatus status="배송완료" />
+    <DeliveryStatus status="주문완료" />
+  </div>
+  <hr>
+  <div>
     <h4>네비게이션바</h4>
     <NavigationBar />
   </div>
@@ -48,9 +56,11 @@ import SmallButton from "@/components/buttons/SmallButton.vue";
 import BigButton from "@/components/buttons/BigButton.vue";
 import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
 import NavigationBar from "@/components/navigation/NavigationBar.vue";
+import DeliveryStatus from "@/components/delivery/DeliveryStatus.vue";
 
 @Options({
   components: {
+    DeliveryStatus,
     ZzimKong,
     CheckBox,
     SmallButton,
