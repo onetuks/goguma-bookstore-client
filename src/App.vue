@@ -1,5 +1,10 @@
 <template>
   <h1>공용 컴포넌트</h1>
+  <div>
+    <h4>상단바</h4>
+    <HeaderBar page-title="여기에 제목" />
+    <hr>
+  </div>
   <div style="background-color: gray">
     <h4>알림 아이콘</h4>
     <AlarmIcon :has-alarm='true' />
@@ -65,13 +70,15 @@ import CheckBox from "@/components/checkbox/CheckBox.vue";
 import SmallButton from "@/components/buttons/SmallButton.vue";
 import BigButton from "@/components/buttons/BigButton.vue";
 import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
-import NavigationBar from "@/components/navigation/NavigationBar.vue";
+import NavigationBar from "@/components/bar/navigation/NavigationBar.vue";
 import DeliveryStatus from "@/components/delivery/DeliveryStatus.vue";
 import PlayButton from "@/components/music/PlayButton.vue";
 import AlarmIcon from "@/components/alarm/AlarmIcon.vue";
+import HeaderBar from "@/components/bar/header/HeaderBar.vue";
 
 @Options({
   components: {
+    HeaderBar,
     AlarmIcon,
     PlayButton,
     DeliveryStatus,

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import MenuNavigation from "@/components/navigation/elements/MenuNavigation.vue";
-import HistoryNavigation from "@/components/navigation/elements/HistoryNavigation.vue";
-import MyPageNavigation from "@/components/navigation/elements/MyPageNavigation.vue";
-import FavoriteNavigation from "@/components/navigation/elements/FavoriteNavigation.vue";
-import HomeNavigation from "@/components/navigation/elements/HomeNavigation.vue";
+import MenuNavigation from "@/components/bar/navigation/elements/MenuNavigation.vue";
+import HistoryNavigation from "@/components/bar/navigation/elements/HistoryNavigation.vue";
+import MyPageNavigation from "@/components/bar/navigation/elements/MyPageNavigation.vue";
+import FavoriteNavigation from "@/components/bar/navigation/elements/FavoriteNavigation.vue";
+import HomeNavigation from "@/components/bar/navigation/elements/HomeNavigation.vue";
 import {ref} from "vue";
 
 type NavigationType = 'menu' | 'history' | 'mypage' | 'favorite' | 'home';
