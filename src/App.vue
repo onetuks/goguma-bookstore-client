@@ -1,19 +1,24 @@
 <template>
   <h1>공용 컴포넌트</h1>
-  <hr>
+  <div></div>
+  <div>
+    <h4>플레이버튼</h4>
+    <PlayButton />
+    <hr>
+  </div>
   <div>
     <h4>배송상태</h4>
     <DeliveryStatus status="배송준비중" />
     <DeliveryStatus status="배송중" />
     <DeliveryStatus status="배송완료" />
     <DeliveryStatus status="주문완료" />
+    <hr>
   </div>
-  <hr>
   <div>
     <h4>네비게이션바</h4>
     <NavigationBar />
+    <hr>
   </div>
-  <hr>
   <div>
     <h4>버튼</h4>
     <div>
@@ -33,18 +38,19 @@
       <SubscribeButton :is-subscribed='true' />
       <SubscribeButton :is-subscribed='false' />
     </div>
+    <hr>
   </div>
-  <hr>
   <div>
     <h4>찜콩</h4>
     <ZzimKong :is-zzim='true' />
     <ZzimKong :is-zzim='false' />
+    <hr>
   </div>
-  <hr>
   <div>
     <h4>체크박스</h4>
     <CheckBox :is-checked='true' />
     <CheckBox :is-checked='false' />
+    <hr>
   </div>
 </template>
 
@@ -57,9 +63,11 @@ import BigButton from "@/components/buttons/BigButton.vue";
 import SubscribeButton from "@/components/buttons/SubscribeButton.vue";
 import NavigationBar from "@/components/navigation/NavigationBar.vue";
 import DeliveryStatus from "@/components/delivery/DeliveryStatus.vue";
+import PlayButton from "@/components/music/PlayButton.vue";
 
 @Options({
   components: {
+    PlayButton,
     DeliveryStatus,
     ZzimKong,
     CheckBox,
