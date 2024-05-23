@@ -33,8 +33,7 @@ defineProps<{
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-14, 14px);
   position: absolute;
-  right: 1.54%;
-  width: 98.46%;
+  width: 100%;
   bottom: 20%;
   height: 80%;
 }
