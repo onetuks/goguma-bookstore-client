@@ -1,5 +1,10 @@
 <template>
   <h1>공용 컴포넌트</h1>
+  <div>
+    <h4>판매중지/재개버튼</h4>
+    <BookSaleButton :onSale='true'/>
+    <BookSaleButton :onSale='false'/>
+  </div>
   <div style="display: flex; gap: 15px">
     <h4>라벨</h4>
     <div style="flex-direction: row">
@@ -155,9 +160,11 @@ import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
 import BookDetailController from "@/components/book/BookDetailController.vue";
 import VRadioBox from "@/components/base/radiobox/VRadioBox.vue";
 import VLabel from "@/components/base/label/VLabel.vue";
+import BookSaleButton from "@/components/book/BookSaleButton.vue";
 
 @Options({
   components: {
+    BookSaleButton,
     VLabel,
     VRadioBox,
     BookDetailController,
