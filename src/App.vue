@@ -4,22 +4,22 @@
     <h4>라벨</h4>
     <div style="flex-direction: row">
       <h5>입점승인</h5>
-      <VLabel label-type="enroll" label-value="승인완료" />
-      <VLabel label-type="enroll" label-value="반려" />
-      <VLabel label-type="enroll" label-value="검토중" />
+      <VLabel :label-value="{type:'enroll', value:'승인완료'}" />
+      <VLabel :label-value="{type:'enroll', value:'반려'}" />
+      <VLabel :label-value="{type:'enroll', value:'검토중'}" />
     </div>
     <div style="flex-direction: row">
       <h5>신간등록검토</h5>
-      <VLabel label-type="registration" label-value="미검토" />
-      <VLabel label-type="registration" label-value="검토완료" />
+      <VLabel :label-value="{type:'registration', value:'미검토'}" />
+      <VLabel :label-value="{type:'registration', value:'검토완료'}" />
     </div>
     <div style="flex-direction: row">
       <h5>발송상태</h5>
-      <VLabel label-type="delievery" label-value="미접수" />
-      <VLabel label-type="delievery" label-value="접수완료" />
-      <VLabel label-type="delievery" label-value="발송완료" />
-      <VLabel label-type="delievery" label-value="배송완료" />
-      <VLabel label-type="delievery" label-value="취소처리" />
+      <VLabel :label-value="{type:'delivery', value:'미접수'}" />
+      <VLabel :label-value="{type:'delivery', value:'접수완료'}" />
+      <VLabel :label-value="{type:'delivery', value:'발송완료'}" />
+      <VLabel :label-value="{type:'delivery', value:'배송완료'}" />
+      <VLabel :label-value="{type:'delivery', value:'취소처리'}" />
     </div>
   </div>
   <div>
@@ -112,8 +112,8 @@
   </div>
   <div>
     <h4>체크박스</h4>
-    <CheckBox :is-checked='true'/>
-    <CheckBox :is-checked='false'/>
+    <CheckBox :checked='true'/>
+    <CheckBox :checked='false'/>
     <hr>
   </div>
 </template>

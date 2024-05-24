@@ -17,21 +17,29 @@ type RegistrationType = {
 
 type DeliveryType = {
   type: typeof LabelType.Delivery;
-  value: '미접수' | '접수완료' | '발송완료' | '배송완료 ' | '취소처리';
+  value: '미접수' | '접수완료' | '발송완료' | '배송완료' | '취소처리';
 }
 
 type LabelValueType = EnrollType | RegistrationType | DeliveryType;
 
-defineProps<{
+const props = defineProps<{
   labelValue: LabelValueType
 }>();
+
+console.log(props.labelValue);
+console.log(props.labelValue.type);
+console.log(props.labelValue.value);
+console.log(props.labelValue.value == '배송완료' || props.labelValue.value == '취소처리');
 
 </script>
 
 <template>
   <div class="property-1">
-    <div class="div">
-      <div class="div2">{{labelValue}}</div>
+    <div class="div"
+         :class="labelValue.value == '배송완료' || labelValue.value == '취소처리' ? 'done' : ''">
+      <div class="div2"
+           :class="labelValue.value == '배송완료' || labelValue.value == '취소처리' ? 'done' : ''"
+      >{{labelValue.value}}</div>
     </div>
   </div>
 
@@ -67,12 +75,20 @@ defineProps<{
   position: relative;
 }
 
+.div.done {
+  border-color: var(--color-border-secondary);
+}
+
 .div2 {
   color: var(--color-text-tertiary, #481c15);
   text-align: left;
   font-family: var(--font-family, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-14, 14px);
   position: relative;
+}
+
+.div2.done {
+  color: var(--color-text-fifth);
 }
 
 </style>
