@@ -1,45 +1,24 @@
 <script setup lang="ts">
-const LabelType = {
-  Enroll: 'enroll',
-  Registration: 'registration',
-  Delivery: 'delivery'
-}
+type LabelType =
+    '승인완료' | '반려' | '검토중'
+    | '미검토' | '검토완료'
+    | '미접수' | '접수완료' | '발송완료' | '배송완료' | '취소처리'
+    | '시집' | '에세이' | '여행' | '사진집' | '일러스트' | '카툰' | '매거진'
+    | '소설' | '엽서' | '스티커' | '액세서리' | '기타' | '문화생활' | '강좌';
 
-type EnrollType = {
-  type: typeof LabelType.Enroll;
-  value: '승인완료' | '반려' | '검토중';
-}
-
-type RegistrationType = {
-  type: typeof LabelType.Registration;
-  value: '미검토' | '검토완료';
-}
-
-type DeliveryType = {
-  type: typeof LabelType.Delivery;
-  value: '미접수' | '접수완료' | '발송완료' | '배송완료' | '취소처리';
-}
-
-type LabelValueType = EnrollType | RegistrationType | DeliveryType;
-
-const props = defineProps<{
-  labelValue: LabelValueType
+defineProps<{
+  labelType: LabelType
 }>();
-
-console.log(props.labelValue);
-console.log(props.labelValue.type);
-console.log(props.labelValue.value);
-console.log(props.labelValue.value == '배송완료' || props.labelValue.value == '취소처리');
-
 </script>
 
 <template>
   <div class="property-1">
     <div class="div"
-         :class="labelValue.value == '배송완료' || labelValue.value == '취소처리' ? 'done' : ''">
+         :class="labelType == '배송완료' || labelType == '취소처리' ? 'done' : ''">
       <div class="div2"
-           :class="labelValue.value == '배송완료' || labelValue.value == '취소처리' ? 'done' : ''"
-      >{{labelValue.value}}</div>
+           :class="labelType == '배송완료' || labelType == '취소처리' ? 'done' : ''"
+      >{{ labelType }}
+      </div>
     </div>
   </div>
 

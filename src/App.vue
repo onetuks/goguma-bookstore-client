@@ -4,22 +4,39 @@
     <h4>라벨</h4>
     <div style="flex-direction: row">
       <h5>입점승인</h5>
-      <VLabel :label-value="{type:'enroll', value:'승인완료'}" />
-      <VLabel :label-value="{type:'enroll', value:'반려'}" />
-      <VLabel :label-value="{type:'enroll', value:'검토중'}" />
+      <VLabel label-type='승인완료' />
+      <VLabel label-type='반려' />
+      <VLabel label-type='검토중' />
     </div>
     <div style="flex-direction: row">
       <h5>신간등록검토</h5>
-      <VLabel :label-value="{type:'registration', value:'미검토'}" />
-      <VLabel :label-value="{type:'registration', value:'검토완료'}" />
+      <VLabel label-type='미검토' />
+      <VLabel label-type='검토완료' />
     </div>
     <div style="flex-direction: row">
       <h5>발송상태</h5>
-      <VLabel :label-value="{type:'delivery', value:'미접수'}" />
-      <VLabel :label-value="{type:'delivery', value:'접수완료'}" />
-      <VLabel :label-value="{type:'delivery', value:'발송완료'}" />
-      <VLabel :label-value="{type:'delivery', value:'배송완료'}" />
-      <VLabel :label-value="{type:'delivery', value:'취소처리'}" />
+      <VLabel label-type='승인완료' />
+      <VLabel label-type='접수완료' />
+      <VLabel label-type='발송완료' />
+      <VLabel label-type='배송완료' />
+      <VLabel label-type='취소처리' />
+    </div>
+    <div style="flex-direction: row">
+      <h5>카테고리</h5>
+      <VLabel label-type='시집' />
+      <VLabel label-type='에세이' />
+      <VLabel label-type='여행' />
+      <VLabel label-type='사진집' />
+      <VLabel label-type='일러스트' />
+      <VLabel label-type='카툰' />
+      <VLabel label-type='매거진' />
+      <VLabel label-type='소설' />
+      <VLabel label-type='엽서' />
+      <VLabel label-type='스티커' />
+      <VLabel label-type='액세서리' />
+      <VLabel label-type='기타' />
+      <VLabel label-type='문화생활' />
+      <VLabel label-type='강좌' />
     </div>
   </div>
   <div>
