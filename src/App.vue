@@ -1,5 +1,27 @@
 <template>
   <h1>공용 컴포넌트</h1>
+  <div style="display: flex; gap: 15px">
+    <h4>라벨</h4>
+    <div style="flex-direction: row">
+      <h5>입점승인</h5>
+      <VLabel label-type="enroll" label-value="승인완료" />
+      <VLabel label-type="enroll" label-value="반려" />
+      <VLabel label-type="enroll" label-value="검토중" />
+    </div>
+    <div style="flex-direction: row">
+      <h5>신간등록검토</h5>
+      <VLabel label-type="registration" label-value="미검토" />
+      <VLabel label-type="registration" label-value="검토완료" />
+    </div>
+    <div style="flex-direction: row">
+      <h5>발송상태</h5>
+      <VLabel label-type="delievery" label-value="미접수" />
+      <VLabel label-type="delievery" label-value="접수완료" />
+      <VLabel label-type="delievery" label-value="발송완료" />
+      <VLabel label-type="delievery" label-value="배송완료" />
+      <VLabel label-type="delievery" label-value="취소처리" />
+    </div>
+  </div>
   <div>
     <h4>라디오버튼</h4>
     <div style="display: flex">
@@ -115,9 +137,11 @@ import ReviewStars from "@/components/review/ReviewStars.vue";
 import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
 import BookDetailController from "@/components/book/BookDetailController.vue";
 import VRadioBox from "@/components/base/radiobox/VRadioBox.vue";
+import VLabel from "@/components/base/label/VLabel.vue";
 
 @Options({
   components: {
+    VLabel,
     VRadioBox,
     BookDetailController,
     VSelectBox,
