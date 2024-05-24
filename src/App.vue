@@ -1,6 +1,13 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>정렬</h4>
+    <h6>후기정렬기준</h6>
+    <VSelectBox select-box-type="review"/>
+    <h6>도서정렬기준</h6>
+    <VSelectBox select-box-type="book"/>
+  </div>
+  <div>
     <h4>별점</h4>
     <ReviewStars/>
   </div>
@@ -94,9 +101,11 @@ import ScmHeaderBar from "@/components/bar/header/TheScmHeaderBar.vue";
 import FnAStatus from "@/components/status/InquiryStatus.vue";
 import MenuItem from "@/components/menu/MenuItem.vue";
 import ReviewStars from "@/components/review/ReviewStars.vue";
+import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
 
 @Options({
   components: {
+    VSelectBox,
     ReviewStars,
     MenuItem,
     FnAStatus,

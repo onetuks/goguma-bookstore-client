@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import HeaderBackButton from "@/components/bar/header/elements/HeaderBackButton.vue";
+import HeaderBackButton from "@/components/base/direction-button/VBackButton.vue";
 import ScmHeaderMyPageButton from "@/components/bar/header/elements/ScmHeaderMyPageButton.vue";
 import HeaderAlarmIcon from "@/components/alarm/VAlarmIcon.vue";
 </script>

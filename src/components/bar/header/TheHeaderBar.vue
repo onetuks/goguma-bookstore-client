@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import HeaderBackButton from "@/components/bar/header/elements/HeaderBackButton.vue";
+import HeaderBackButton from "@/components/base/direction-button/VBackButton.vue";
 import HeaderEasterEggButton from "@/components/bar/header/elements/HeaderEasterEggButton.vue";
 import HeaderSearchButton from "@/components/bar/header/elements/HeaderSearchButton.vue";
 import HeaderShoppingBasketButton from "@/components/bar/header/elements/HeaderShoppingBasketButton.vue";
