@@ -1,6 +1,10 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>도서 상세 페이지 컨트롤</h4>
+    <BookDetailController />
+  </div>
+  <div>
     <h4>정렬</h4>
     <h6>후기정렬기준</h6>
     <VSelectBox select-box-type="review"/>
@@ -102,9 +106,11 @@ import FnAStatus from "@/components/status/InquiryStatus.vue";
 import MenuItem from "@/components/menu/MenuItem.vue";
 import ReviewStars from "@/components/review/ReviewStars.vue";
 import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
+import BookDetailController from "@/components/book/BookDetailController.vue";
 
 @Options({
   components: {
+    BookDetailController,
     VSelectBox,
     ReviewStars,
     MenuItem,
