@@ -1,6 +1,13 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>라디오버튼</h4>
+    <div style="display: flex">
+      <VRadioBox :checked='true'/>
+      <VRadioBox :checked='false'/>
+    </div>
+  </div>
+  <div>
     <h4>도서 상세 페이지 컨트롤</h4>
     <BookDetailController />
   </div>
@@ -99,17 +106,19 @@ import SubscribeButton from "@/components/base/button/VSubscribeButton.vue";
 import NavigationBar from "@/components/bar/navigation/TheNavigationBar.vue";
 import DeliveryStatus from "@/components/status/DeliveryStatus.vue";
 import PlayButton from "@/components/music/PlayButton.vue";
-import AlarmIcon from "@/components/alarm/VAlarmIcon.vue";
+import AlarmIcon from "@/components/base/alarm/VAlarmIcon.vue";
 import HeaderBar from "@/components/bar/header/TheHeaderBar.vue";
 import ScmHeaderBar from "@/components/bar/header/TheScmHeaderBar.vue";
 import FnAStatus from "@/components/status/InquiryStatus.vue";
-import MenuItem from "@/components/menu/MenuItem.vue";
+import MenuItem from "@/components/base/menu/MenuItem.vue";
 import ReviewStars from "@/components/review/ReviewStars.vue";
 import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
 import BookDetailController from "@/components/book/BookDetailController.vue";
+import VRadioBox from "@/components/base/radiobox/VRadioBox.vue";
 
 @Options({
   components: {
+    VRadioBox,
     BookDetailController,
     VSelectBox,
     ReviewStars,

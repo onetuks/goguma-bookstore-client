@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import {ref} from "vue";
 
-const props = withDefaults(defineProps<{ isChecked: boolean }>(), {isChecked: false});
+const props = withDefaults(defineProps<{ checked: boolean }>(), {checked: false});
 
-let checked = ref<boolean>(props.isChecked);
+let isChecked = ref<boolean>(props.checked);
 
 const toggleChecked = () => {
-  checked.value = !checked.value;
+  isChecked.value = !isChecked.value;
 }
 </script>
 
@@ -16,7 +16,7 @@ const toggleChecked = () => {
       xmlns="http://www.w3.org/2000/svg"
       @click="toggleChecked"
   >
-    <g v-if="checked">
+    <g v-if="isChecked">
       <rect
           fill="#7B7B7B"
           height="15"

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import HeaderBackButton from "@/components/base/direction-button/VBackButton.vue";
+import VBackButton from "@/components/base/direction-button/VBackButton.vue";
 import ScmHeaderMyPageButton from "@/components/bar/header/elements/ScmHeaderMyPageButton.vue";
-import HeaderAlarmIcon from "@/components/alarm/VAlarmIcon.vue";
+import VAlarmIcon from "@/components/base/alarm/VAlarmIcon.vue";
 </script>
 
 <template>
   <div class="property-1-variant-2">
-    <HeaderBackButton/>
-    <HeaderAlarmIcon :has-alarm='true'/>
+    <VBackButton/>
+    <VAlarmIcon :has-alarm='true'/>
     <div class="div3">
       <div class="div4">유통정보시스템</div>
     </div>

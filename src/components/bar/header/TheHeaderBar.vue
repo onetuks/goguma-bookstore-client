@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import HeaderBackButton from "@/components/base/direction-button/VBackButton.vue";
+import VBackButton from "@/components/base/direction-button/VBackButton.vue";
 import HeaderEasterEggButton from "@/components/bar/header/elements/HeaderEasterEggButton.vue";
 import HeaderSearchButton from "@/components/bar/header/elements/HeaderSearchButton.vue";
 import HeaderShoppingBasketButton from "@/components/bar/header/elements/HeaderShoppingBasketButton.vue";
@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div class="property-1">
-    <HeaderBackButton/>
+    <VBackButton/>
     <HeaderEasterEggButton/>
     <div class="header-bat-title">{{ pageTitle }}</div>
     <HeaderSearchButton/>
