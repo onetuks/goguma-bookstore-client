@@ -14,6 +14,7 @@ defineProps<{
   publisher: string,
   price: number,
   salesRate: number,
+  stockCount: number
   deliveryFee: number,
   reviewScore: number,
 }>();
@@ -49,11 +50,23 @@ defineProps<{
       <div class="frame-1173">
         <VZzimKongButton :is-zzim="true"/>
         <VCopyLinkButton/>
-        <div class="div13">
-          <div class="div14">장바구니</div>
+        <div v-if="stockCount > 0"
+             style="display: flex">
+          <div class="div13">
+            <div class="div14">장바구니</div>
+          </div>
+          <div class="div15">
+            <div class="div14">바로구매</div>
+          </div>
         </div>
-        <div class="div15">
-          <div class="div14">바로구매</div>
+        <div v-else
+             class="div11">
+          <div class="div12">
+          <span>
+            <span class="div-12-span">품절</span>
+            <span class="div-12-span2">(재입고 알림 신청)</span>
+          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -188,6 +201,46 @@ defineProps<{
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
+}
+
+.div11 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-button-fourth, #c8c8c8);
+  border-width: 1px;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 268px;
+  height: 30px;
+  position: relative;
+}
+
+.div12 {
+  text-align: center;
+  font-family: var(--font-family-bold, "NanumSquare-Bold"), sans-serif;
+  font-size: var(--font-size-14, 14px);
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-12-span {
+  color: var(--color-text-fifth, #c8c8c8);
+  font-family: var(--font-family-bold, "NanumSquare-Bold"), sans-serif;
+  font-size: var(--font-size-14, 14px);
+}
+
+.div-12-span2 {
+  color: #8c8c8c;
+  font-family: var(--font-family-bold, "NanumSquare-Bold"), sans-serif;
+  font-size: var(--font-size-14, 14px);
 }
 
 .div13 {

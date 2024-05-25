@@ -10,6 +10,17 @@
         :delivery-fee="3000"
         :price="20000"
         :sales-rate="10"
+        stock-count="4"
+        review-score="3.4"/>
+    <BookDetailCard
+        :book-id="1"
+        title="안녕둔촌주공아파트"
+        author-nickname="홍길동과 양반들"
+        publisher="동해번쩍북스"
+        :delivery-fee="3000"
+        :price="20000"
+        :sales-rate="10"
+        stock-count="0"
         review-score="3.4"/>
   </div>
   <div>
