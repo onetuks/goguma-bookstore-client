@@ -1,6 +1,22 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>상품정보 카드</h4>
+    <BookDetailCard
+        :book-id="1"
+        title="안녕둔촌주공아파트"
+        author-nickname="홍길동과 양반들"
+        publisher="동해번쩍북스"
+        :delivery-fee="3000"
+        :price="20000"
+        :sales-rate="10"
+        review-score="3.4"/>
+  </div>
+  <div>
+    <h4>에러 아이콘</h4>
+    <VErrorIcon/>
+  </div>
+  <div>
     <h4>판매중지/재개버튼</h4>
     <BookSaleButton :onSale='true'/>
     <BookSaleButton :onSale='false'/>
@@ -9,39 +25,39 @@
     <h4>라벨</h4>
     <div style="flex-direction: row">
       <h5>입점승인</h5>
-      <VLabel label-type='승인완료' />
-      <VLabel label-type='반려' />
-      <VLabel label-type='검토중' />
+      <VLabel label-type='승인완료'/>
+      <VLabel label-type='반려'/>
+      <VLabel label-type='검토중'/>
     </div>
     <div style="flex-direction: row">
       <h5>신간등록검토</h5>
-      <VLabel label-type='미검토' />
-      <VLabel label-type='검토완료' />
+      <VLabel label-type='미검토'/>
+      <VLabel label-type='검토완료'/>
     </div>
     <div style="flex-direction: row">
       <h5>발송상태</h5>
-      <VLabel label-type='승인완료' />
-      <VLabel label-type='접수완료' />
-      <VLabel label-type='발송완료' />
-      <VLabel label-type='배송완료' />
-      <VLabel label-type='취소처리' />
+      <VLabel label-type='승인완료'/>
+      <VLabel label-type='접수완료'/>
+      <VLabel label-type='발송완료'/>
+      <VLabel label-type='배송완료'/>
+      <VLabel label-type='취소처리'/>
     </div>
     <div style="flex-direction: row">
       <h5>카테고리</h5>
-      <VLabel label-type='시집' />
-      <VLabel label-type='에세이' />
-      <VLabel label-type='여행' />
-      <VLabel label-type='사진집' />
-      <VLabel label-type='일러스트' />
-      <VLabel label-type='카툰' />
-      <VLabel label-type='매거진' />
-      <VLabel label-type='소설' />
-      <VLabel label-type='엽서' />
-      <VLabel label-type='스티커' />
-      <VLabel label-type='액세서리' />
-      <VLabel label-type='기타' />
-      <VLabel label-type='문화생활' />
-      <VLabel label-type='강좌' />
+      <VLabel label-type='시집'/>
+      <VLabel label-type='에세이'/>
+      <VLabel label-type='여행'/>
+      <VLabel label-type='사진집'/>
+      <VLabel label-type='일러스트'/>
+      <VLabel label-type='카툰'/>
+      <VLabel label-type='매거진'/>
+      <VLabel label-type='소설'/>
+      <VLabel label-type='엽서'/>
+      <VLabel label-type='스티커'/>
+      <VLabel label-type='액세서리'/>
+      <VLabel label-type='기타'/>
+      <VLabel label-type='문화생활'/>
+      <VLabel label-type='강좌'/>
     </div>
   </div>
   <div>
@@ -53,7 +69,7 @@
   </div>
   <div>
     <h4>도서 상세 페이지 컨트롤</h4>
-    <BookDetailController />
+    <BookDetailController/>
   </div>
   <div>
     <h4>정렬</h4>
@@ -128,8 +144,8 @@
   </div>
   <div>
     <h4>찜콩</h4>
-    <ZzimKong :is-zzim='true'/>
-    <ZzimKong :is-zzim='false'/>
+    <VZzimKongButton :is-zzim='true'/>
+    <VZzimKongButton :is-zzim='false'/>
     <hr>
   </div>
   <div>
@@ -142,28 +158,32 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import ZzimKong from "@/components/base/zzim/VZzimKong.vue";
-import CheckBox from "@/components/base/checkbox/VCheckBox.vue";
-import SmallButton from "@/components/base/button/VSmallButton.vue";
-import BigButton from "@/components/base/button/VBigButton.vue";
+import VZzimKongButton from "@/components/base/zzim/VZzimKongButton.vue";
+import VCheckBox from "@/components/base/checkbox/VCheckBox.vue";
+import VSmallButton from "@/components/base/button/VSmallButton.vue";
+import VBigButton from "@/components/base/button/VBigButton.vue";
 import SubscribeButton from "@/components/base/button/VSubscribeButton.vue";
-import NavigationBar from "@/components/bar/navigation/TheNavigationBar.vue";
+import NavigationBar from "@/components/base/navigation/TheNavigationBar.vue";
 import DeliveryStatus from "@/components/status/DeliveryStatus.vue";
 import PlayButton from "@/components/music/PlayButton.vue";
 import AlarmIcon from "@/components/base/alarm/VAlarmIcon.vue";
-import HeaderBar from "@/components/bar/header/TheHeaderBar.vue";
-import ScmHeaderBar from "@/components/bar/header/TheScmHeaderBar.vue";
+import HeaderBar from "@/components/base/header/TheHeaderBar.vue";
+import ScmHeaderBar from "@/components/base/header/TheScmHeaderBar.vue";
 import FnAStatus from "@/components/status/InquiryStatus.vue";
 import MenuItem from "@/components/base/menu/MenuItem.vue";
 import ReviewStars from "@/components/review/ReviewStars.vue";
 import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
-import BookDetailController from "@/components/book/BookDetailController.vue";
+import BookDetailController from "@/components/book/detail/BookDetailController.vue";
 import VRadioBox from "@/components/base/radiobox/VRadioBox.vue";
 import VLabel from "@/components/base/label/VLabel.vue";
 import BookSaleButton from "@/components/book/BookSaleButton.vue";
+import VErrorIcon from "@/components/base/error/VErrorIcon.vue";
+import BookDetailCard from "@/components/book/detail/card/BookDetailCard.vue";
 
 @Options({
   components: {
+    BookDetailCard,
+    VErrorIcon,
     BookSaleButton,
     VLabel,
     VRadioBox,
@@ -177,10 +197,10 @@ import BookSaleButton from "@/components/book/BookSaleButton.vue";
     AlarmIcon,
     PlayButton,
     DeliveryStatus,
-    ZzimKong,
-    CheckBox,
-    SmallButton,
-    BigButton,
+    VZzimKongButton,
+    CheckBox: VCheckBox,
+    SmallButton: VSmallButton,
+    BigButton: VBigButton,
     SubscribeButton,
     NavigationBar,
   },
