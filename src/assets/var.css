@@ -1,0 +1,39 @@
+:root {
+    /* Color */
+    --color-background-primary: #FEFDF6;
+
+    --color-surface-primary: #481C15;
+    --color-surface-secondary: #153524;
+    --color-surface-tertiary: #F4F3EC;
+    --color-surface-fourth: #E9E8DF;
+    --color-surface-fifth: #FFFFFF;
+
+    --color-text-black: #000000;
+    --color-text-white: #FFFFFF;
+    --color-text-tertiary: #481C15;
+    --color-text-fourth: #756357;
+    --color-text-fifth: #C8C8C8;
+
+    --color-border-primary: #E8E6D5;
+    --color-border-secondary: #F4F3EC;
+    --color-border-tertiary: #756357;
+
+    --color-button-primary: #E1DDCB;
+    --color-button-secondary: #6A3E37;
+    --color-button-tertiary: #267B4D;
+    --color-button-fourth: #C8C8C8;
+    --color-button-fifth: #FFFFFF;
+    --color-button-sixth: #000000;
+
+    /* Fonts */
+    --font-family: 'NanumSquare';
+    --font-family-light: 'NanumSquareLight';
+    --font-family-bold: 'NanumSquareBold';
+    --font-family-extra-bold: 'NanumSquareExtraBold';
+
+    --font-size-11: 11px;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+}
