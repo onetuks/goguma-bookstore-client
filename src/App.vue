@@ -1,6 +1,14 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>메인추천카드</h4>
+    <BookMainRecommendCard
+        cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        title="겨울섬"
+        price="15000"
+        sales-rate="10"/>
+  </div>
+  <div>
     <h4>팝업</h4>
     <h6>확인팝업</h6>
     <VConfirmPopup
@@ -251,9 +259,11 @@ import BookListItem from "@/components/book/list/BookListItem.vue";
 import VConfirmPopup from "@/components/base/popup/VConfirmPopup.vue";
 import VConfirmCancelPopup from "@/components/base/popup/VConfirmCancelPopup.vue";
 import BookListVerticalItem from "@/components/book/list/BookListVerticalItem.vue";
+import BookMainRecommendCard from "@/components/book/main/BookMainRecommendCard.vue";
 
 @Options({
   components: {
+    BookMainRecommendCard,
     BookListVerticalItem,
     VConfirmCancelPopup,
     VConfirmPopup,
