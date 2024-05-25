@@ -16,7 +16,8 @@
   </div>
   <div>
     <h4>상품리스트</h4>
-    <BookListItem
+    <h6>가로</h6>
+    <BookListHorizontalItem
         cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
         title="안녕, 둔촌주공아파트"
         author-nickname="이인규"
@@ -24,6 +25,14 @@
         price="14900"
         sales-rate="0"
         :categories="['사진집', '에세이']"
+    />
+    <h6>세로</h6>
+    <BookListVerticalItem
+        cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        title="록셔리 vol.2"
+        publisher="스토리지북스"
+        price="15000"
+        sales-rate="10"
     />
   </div>
   <div>
@@ -241,12 +250,14 @@ import ReviewDetailCard from "@/components/review/detail/ReviewDetailCard.vue";
 import BookListItem from "@/components/book/list/BookListItem.vue";
 import VConfirmPopup from "@/components/base/popup/VConfirmPopup.vue";
 import VConfirmCancelPopup from "@/components/base/popup/VConfirmCancelPopup.vue";
+import BookListVerticalItem from "@/components/book/list/BookListVerticalItem.vue";
 
 @Options({
   components: {
+    BookListVerticalItem,
     VConfirmCancelPopup,
     VConfirmPopup,
-    BookListItem,
+    BookListHorizontalItem: BookListItem,
     ReviewDetailCard,
     BookDetailCard,
     VErrorIcon,

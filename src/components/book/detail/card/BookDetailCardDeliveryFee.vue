@@ -1,17 +1,16 @@
 <script setup lang="ts">
+
+import {formatPrice} from "../../price/PriceCalculator";
+
 defineProps<{
     deliveryFee: number,
 }>();
-
-const formatDeliveryFee = (deliveryFee: number): string => {
-    return deliveryFee.toLocaleString();
-}
 </script>
 
 <template>
   <div class="book-detail-card-delivery-fee">
     <div class="book-detail-card-delivery-fee-text">배송비:</div>
-    <div class="_3000">{{formatDeliveryFee(deliveryFee)}}</div>
+    <div class="_3000">{{formatPrice(deliveryFee)}}</div>
     <div class="book-detail-card-delivery-fee-text">원</div>
   </div>
 </template>

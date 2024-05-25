@@ -1,21 +1,15 @@
 <script setup lang="ts">
+import {formatDiscountedPrice} from "../../price/PriceCalculator";
+
 defineProps<{
     price: number,
   salesRate: number,
 }>();
-
-const getPurchasePrice = (price: number, salesRate: number) => {
-  return price * (1 - salesRate / 100);
-}
-
-const formatPurchasePrice = (price: number, salesRate: number): string => {
-  return getPurchasePrice(price, salesRate).toLocaleString();
-}
 </script>
 
 <template>
   <div class="frame-1240">
-    <div class="_18-000">{{formatPurchasePrice(price, salesRate)}}</div>
+    <div class="_18-000">{{formatDiscountedPrice(price, salesRate)}}</div>
     <div class="div9">원</div>
   </div>
 </template>

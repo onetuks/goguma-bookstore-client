@@ -54,7 +54,6 @@ defineProps<{
   font-weight: 700;
   white-space: nowrap;
   justify-content: center;
-  max-width: 330px
 }
 
 .div-5 {

@@ -1,12 +1,10 @@
 <script setup lang="ts">
+import {formatPrice} from '@/components/book/price/PriceCalculator';
+
 defineProps<{
   price: number,
   salesRate: number,
 }>();
-
-const formatPrice = (price: number): string => {
-  return price.toLocaleString();
-}
 
 </script>
 
