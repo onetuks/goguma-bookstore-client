@@ -1,6 +1,15 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>후기 미리보기</h4>
+    <ReviewListItem
+      cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+      title="안녕, 둔촌주공아파트"
+      :review-score="3"
+      content="주공아파트는 무엇인가?"
+    />
+  </div>
+  <div>
     <h4>메인추천카드</h4>
     <BookMainRecommendCard
         cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
@@ -260,9 +269,11 @@ import VConfirmPopup from "@/components/base/popup/VConfirmPopup.vue";
 import VConfirmCancelPopup from "@/components/base/popup/VConfirmCancelPopup.vue";
 import BookListVerticalItem from "@/components/book/list/BookListVerticalItem.vue";
 import BookMainRecommendCard from "@/components/book/main/BookMainRecommendCard.vue";
+import ReviewListItem from "@/components/review/list/ReviewListItem.vue";
 
 @Options({
   components: {
+    ReviewListItem,
     BookMainRecommendCard,
     BookListVerticalItem,
     VConfirmCancelPopup,
