@@ -10,64 +10,23 @@ defineProps<{
   labelType: LabelType
 }>();
 </script>
-
 <template>
-  <div class="property-1">
-    <div class="div"
-         :class="labelType == '배송완료' || labelType == '취소처리' ? 'done' : ''">
-      <div class="div2"
-           :class="labelType == '배송완료' || labelType == '취소처리' ? 'done' : ''"
-      >{{ labelType }}
-      </div>
-    </div>
+  <div class="vlabel"
+       :class="labelType == '배송완료' || labelType == '취소처리' ? 'done' : ''">
+    {{ labelType }}
   </div>
-
 </template>
 
 <style scoped>
-.property-1,
-.property-1 * {
-  box-sizing: border-box;
-}
-
-.property-1 {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-}
-
-.div {
-  border-radius: 15px;
-  border-style: solid;
-  border-color: var(--color-border-tertiary, #756357);
-  border-width: 1px;
-  padding: 5px 10px 5px 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
+.vlabel {
   justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.div.done {
-  border-color: var(--color-border-secondary);
-}
-
-.div2 {
+  border-radius: 15px;
+  border-color: rgba(117, 99, 87, 1);
+  border-style: solid;
+  border-width: 1px;
   color: var(--color-text-tertiary, #481c15);
-  text-align: left;
-  font-family: var(--font-family, "NanumSquare-ExtraBold"), sans-serif;
-  font-size: var(--font-size-14, 14px);
-  position: relative;
+  white-space: nowrap;
+  padding: 5px 10px;
+  font: 800 14px NanumSquare, sans-serif;
 }
-
-.div2.done {
-  color: var(--color-text-fifth);
-}
-
 </style>

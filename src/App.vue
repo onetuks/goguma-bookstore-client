@@ -1,7 +1,19 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
-    <h3>후기 카드</h3>
+    <h4>상품리스트</h4>
+    <BookListItem
+        cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        title="안녕, 둔촌주공아파트"
+        author-nickname="이인규"
+        publisher="라야"
+        price="14900"
+        sales-rate="0"
+        :categories="['사진집', '에세이']"
+    />
+  </div>
+  <div>
+    <h4>후기 카드</h4>
     <ReviewDetailCard
         author-nickname="홍길동"
         profile-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
@@ -157,15 +169,15 @@
     <h4>버튼</h4>
     <div>
       <h5>소버튼</h5>
-      <SmallButton button-name='버튼' button-state="default"/>
-      <SmallButton button-name='버튼' button-state="disabled"/>
-      <SmallButton button-name='버튼' button-state="emphasis"/>
+      <VSmallButton button-name='버튼' button-state="default"/>
+      <VSmallButton button-name='버튼' button-state="disabled"/>
+      <VSmallButton button-name='버튼' button-state="emphasis"/>
     </div>
     <div>
       <h5>대버튼</h5>
-      <BigButton button-name='버튼' button-state="default"/>
-      <BigButton button-name='버튼' button-state="disabled"/>
-      <BigButton button-name='버튼' button-state="emphasis"/>
+      <VBigButton button-name='버튼' button-state="default"/>
+      <VBigButton button-name='버튼' button-state="disabled"/>
+      <VBigButton button-name='버튼' button-state="emphasis"/>
     </div>
     <div>
       <h5>구독버튼</h5>
@@ -182,8 +194,8 @@
   </div>
   <div>
     <h4>체크박스</h4>
-    <CheckBox :checked='true'/>
-    <CheckBox :checked='false'/>
+    <VCheckBox :checked='true'/>
+    <VCheckBox :checked='false'/>
     <hr>
   </div>
 </template>
@@ -212,9 +224,11 @@ import BookSaleButton from "@/components/book/BookSaleButton.vue";
 import VErrorIcon from "@/components/base/error/VErrorIcon.vue";
 import BookDetailCard from "@/components/book/detail/card/BookDetailCard.vue";
 import ReviewDetailCard from "@/components/review/detail/ReviewDetailCard.vue";
+import BookListItem from "@/components/book/list/BookListItem.vue";
 
 @Options({
   components: {
+    BookListItem,
     ReviewDetailCard,
     BookDetailCard,
     VErrorIcon,
@@ -232,9 +246,9 @@ import ReviewDetailCard from "@/components/review/detail/ReviewDetailCard.vue";
     PlayButton,
     DeliveryStatus,
     VZzimKongButton,
-    CheckBox: VCheckBox,
-    SmallButton: VSmallButton,
-    BigButton: VBigButton,
+    VCheckBox,
+    VSmallButton,
+    VBigButton,
     SubscribeButton,
     NavigationBar,
   },
