@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="frame-881">
+  <div class="forward-button">
     <svg
-        class="div2"
+        class="forward-button-icon"
         fill="none"
         height="18"
         viewBox="0 0 10 18"
@@ -22,7 +22,7 @@
 
 <style scoped>
 
-.frame-881 {
+.forward-button {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.div2 {
+.forward-button-icon {
   flex-shrink: 0;
   width: 9px;
   height: 16px;

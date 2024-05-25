@@ -42,12 +42,8 @@ const handleClick = (navigationTypeName: NavigationType) => {
 </template>
 
 <style scoped>
-.navigation,
-.navigation * {
-  box-sizing: border-box;
-}
-
 .navigation {
+  box-sizing: border-box;
   background: var(--color-surface-fourth, #e9e8df);
   border-radius: 10px 10px 0 0;
   border-style: solid;

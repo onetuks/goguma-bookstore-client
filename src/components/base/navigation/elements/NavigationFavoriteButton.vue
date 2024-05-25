@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-wrapper">
+  <div class="favorite-button">
     <svg
         class="favorite"
         fill="none"
@@ -25,12 +25,8 @@ defineProps<{
 </template>
 
 <style scoped>
-.property-wrapper,
-.property-wrapper * {
+.favorite-button {
   box-sizing: border-box;
-}
-
-.property-wrapper {
   border-style: solid;
   border-color: var(--color-text-white, #ffffff);
   border-width: 0 2px 0 0;

@@ -12,10 +12,10 @@ const moveToAlarmPage = () => {
 
 <template>
   <div
-      class="frame-860"
+      class="valarm-wrapper"
       @click="moveToAlarmPage"
   >
-    <div class="property-wrapper">
+    <div class="valarm">
       <svg
           class="alarm-button"
           fill="none"
@@ -37,18 +37,14 @@ const moveToAlarmPage = () => {
 </template>
 
 <style scoped>
-.property-wrapper,
-.property-wrapper * {
+.valarm {
   box-sizing: border-box;
-}
-
-.property-wrapper {
   width: 18px;
   height: 21px;
   position: relative;
 }
 
-.frame-860 {
+.valarm-wrapper {
   padding: 10px;
   display: flex;
   flex-direction: row;

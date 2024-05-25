@@ -62,8 +62,7 @@ const toggleChecked = () => {
 </template>
 
 <style scoped>
-.checkbox,
-.checkbox * {
+.checkbox {
   box-sizing: border-box;
   width: 16px;
   height: 16px;

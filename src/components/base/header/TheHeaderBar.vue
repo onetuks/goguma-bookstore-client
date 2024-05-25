@@ -10,10 +10,10 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-1">
+  <div class="header-bar">
     <VBackButton/>
     <HeaderEasterEggButton/>
-    <div class="header-bat-title">{{ pageTitle }}</div>
+    <div class="header-bar-title">{{ pageTitle }}</div>
     <HeaderSearchButton/>
     <HeaderShoppingBasketButton/>
   </div>
@@ -21,12 +21,8 @@ defineProps<{
 </template>
 
 <style scoped>
-.property-1,
-.property-1 * {
+.header-bar {
   box-sizing: border-box;
-}
-
-.property-1 {
   border-style: solid;
   border-color: var(--color-border-tertiary, #756357);
   border-width: 0 0 1px 0;
@@ -39,7 +35,7 @@ defineProps<{
   position: relative;
 }
 
-.header-bat-title {
+.header-bar-title {
   color: #000000;
   text-align: center;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;

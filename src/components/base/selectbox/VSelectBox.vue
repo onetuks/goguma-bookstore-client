@@ -59,7 +59,7 @@ onUnmounted(() => {
 <template>
   <div class="selectBoxList">
     <div class="box">
-      <div class="selectBox2"
+      <div class="selectBox"
            :class="{ active: selectBoxActive }">
         <button
             class="label"
@@ -85,11 +85,8 @@ onUnmounted(() => {
   display: flex;
 }
 
-.selectBox2 * {
+.selectBox {
   box-sizing: border-box;
-}
-
-.selectBox2 {
   position: relative;
   display: flex;
   z-index: 1;
@@ -109,7 +106,7 @@ onUnmounted(() => {
   appearance: none;
 }
 
-.selectBox2 .label {
+.selectBox .label {
   display: flex;
   align-items: center;
   width: inherit;
@@ -121,7 +118,7 @@ onUnmounted(() => {
   cursor: pointer;
 }
 
-.selectBox2 .optionList {
+.selectBox .optionList {
   position: absolute;
   top: 28px;
   left: 0;
@@ -136,42 +133,42 @@ onUnmounted(() => {
   transition: .3s ease-in;
 }
 
-.selectBox2 .optionList::-webkit-scrollbar {
+.selectBox .optionList::-webkit-scrollbar {
   width: 6px;
 }
 
-.selectBox2 .optionList::-webkit-scrollbar-track {
+.selectBox .optionList::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.selectBox2 .optionList::-webkit-scrollbar-thumb {
+.selectBox .optionList::-webkit-scrollbar-thumb {
   background: #303030;
   border-radius: 45px;
 }
 
-.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {
+.selectBox .optionList::-webkit-scrollbar-thumb:hover {
   background: #303030;
 }
 
-.selectBox2.active {
+.selectBox.active {
   z-index: 10;
 }
 
-.selectBox2.active .optionList {
+.selectBox.active .optionList {
   max-height: 500px;
 }
 
-.selectBox2 .optionItem {
+.selectBox .optionItem {
   border-bottom: 1px dashed rgb(170, 72, 72);
   padding: 5px 15px 5px;
   transition: .1s;
 }
 
-.selectBox2 .optionItem:hover {
+.selectBox .optionItem:hover {
   background: rgb(175, 93, 93);
 }
 
-.selectBox2 .optionItem:last-child {
+.selectBox .optionItem:last-child {
   border-bottom: 0 none;
 }
 </style>

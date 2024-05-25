@@ -14,9 +14,10 @@ const copyCurrentUrlToClipboard = () => {
 </script>
 
 <template>
-  <div class="frame-1237" @click="copyCurrentUrlToClipboard">
+  <div class="copy-link-button"
+       @click="copyCurrentUrlToClipboard">
     <svg
-        class="div12"
+        class="copy-link-icon"
         width="18"
         height="18"
         viewBox="0 0 18 18"
@@ -34,26 +35,24 @@ const copyCurrentUrlToClipboard = () => {
 </template>
 
 <style scoped>
-.frame-1237 {
+.copy-link-button {
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-border-tertiary, #756357);
   border-width: 1px;
-  padding: 10px;
+  padding: 6px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 30px;
-  height: 30px;
   position: relative;
 }
-.div12 {
+.copy-link-icon {
   flex-shrink: 0;
-  width: 16px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   position: relative;
   overflow: visible;
 }

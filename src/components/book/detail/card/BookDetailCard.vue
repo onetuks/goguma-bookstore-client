@@ -51,7 +51,7 @@ defineProps<{
         <VZzimKongButton :is-zzim="true"/>
         <VCopyLinkButton/>
         <div v-if="stockCount > 0"
-             style="display: flex">
+             style="display: flex; gap: 10px">
           <div class="div13">
             <div class="div14">장바구니</div>
           </div>

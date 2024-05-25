@@ -5,11 +5,11 @@ defineProps<{
 </script>
 
 <template>
-  <div class="frame-1161">
+  <div class="review-stars">
     <svg
         v-for="index in 5"
         :key="index"
-        class="div4"
+        class="review-star"
         fill="none"
         viewBox="0 0 21 21"
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ defineProps<{
 
 <style scoped>
 
-.frame-1161 {
+.review-stars {
   display: flex;
   flex-direction: row;
   gap: 0;
@@ -36,7 +36,7 @@ defineProps<{
   position: relative;
 }
 
-.div4 {
+.review-star {
   flex-shrink: 0;
   width: 21px;
   height: 21px;

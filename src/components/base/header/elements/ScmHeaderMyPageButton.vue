@@ -8,11 +8,11 @@ const moveToAuthorMyPage = () => {
 
 <template>
   <div
-      class="frame-892"
+      class="scm-header-my-page"
       @click="moveToAuthorMyPage"
   >
     <svg
-        class="div5"
+        class="scm-header-my-page-icon"
         fill="none"
         height="20"
         viewBox="0 0 20 20"
@@ -37,7 +37,7 @@ const moveToAuthorMyPage = () => {
 
 <style scoped>
 
-.frame-892 {
+.scm-header-my-page {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -50,7 +50,7 @@ const moveToAuthorMyPage = () => {
   position: relative;
 }
 
-.div5 {
+.scm-header-my-page-icon {
   flex-shrink: 0;
   width: 19px;
   height: 19px;

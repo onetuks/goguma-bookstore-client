@@ -9,16 +9,16 @@ const formatDeliveryFee = (deliveryFee: number): string => {
 </script>
 
 <template>
-  <div class="frame-1428">
-    <div class="div10">배송비:</div>
+  <div class="book-detail-card-delivery-fee">
+    <div class="book-detail-card-delivery-fee-text">배송비:</div>
     <div class="_3000">{{formatDeliveryFee(deliveryFee)}}</div>
-    <div class="div10">원</div>
+    <div class="book-detail-card-delivery-fee-text">원</div>
   </div>
 </template>
 
 <style scoped>
 
-.frame-1428 {
+.book-detail-card-delivery-fee {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -27,7 +27,7 @@ const formatDeliveryFee = (deliveryFee: number): string => {
   flex-shrink: 0;
   position: relative;
 }
-.div10 {
+.book-detail-card-delivery-fee-text {
   color: #000000;
   text-align: center;
   font-family: var(--font-family, "NanumSquare-Regular"), sans-serif;

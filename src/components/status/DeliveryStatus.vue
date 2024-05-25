@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-wrapper">
+  <div class="history-button">
     <div class="delivery-status">
       {{ status }}
     </div>
@@ -16,12 +16,12 @@ defineProps<{
 </template>
 
 <style scoped>
-.property-wrapper,
-.property-wrapper * {
+.history-button,
+.history-button * {
   box-sizing: border-box;
 }
 
-.property-wrapper {
+.history-button {
   width: 65px;
   height: 20px;
   position: relative;

@@ -15,7 +15,7 @@ const convertDProperty = () => {
 
 <template>
   <svg
-      class="property-wrapper"
+      class="zzim-kong-icon"
       xmlns="http://www.w3.org/2000/svg"
       @click="convertDProperty">
     <path
@@ -29,7 +29,7 @@ const convertDProperty = () => {
 
 <style scoped>
 
-.property-wrapper {
+.zzim-kong-icon {
   background-size: 100% 100%;
   height: 26px;
   width: 26px;

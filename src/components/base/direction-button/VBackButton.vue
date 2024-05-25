@@ -9,7 +9,7 @@ const returnBack = () => {
 <template>
   <div @click="returnBack">
     <svg
-        class="frame-860"
+        class="back-button"
         fill="none"
         height="50"
         viewBox="0 0 50 50"
@@ -25,7 +25,7 @@ const returnBack = () => {
 </template>
 
 <style scoped>
-.frame-860 {
+.back-button {
   padding: 10px;
   display: flex;
   flex-direction: row;

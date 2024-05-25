@@ -6,18 +6,18 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-1">
-    <div v-if="checked" class="ellipse-31"/>
+  <div class="vradio">
+    <div v-if="checked" class="vradio-dot"/>
   </div>
 
 </template>
 
 <style scoped>
-.property-1,
-.property-1 * {
+.vradio,
+.vradio * {
   box-sizing: border-box;
 }
-.property-1 {
+.vradio {
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-border-primary, #e8e6d5);
@@ -32,7 +32,7 @@ defineProps<{
   height: 20px;
   position: relative;
 }
-.ellipse-31 {
+.vradio-dot {
   background: var(--color-surface-secondary, #153524);
   border-radius: 50%;
   flex-shrink: 0;

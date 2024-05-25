@@ -115,7 +115,7 @@ defineProps<{
   display: flex;
   margin-top: 40px;
   width: 100%;
-  gap: 20px;
+  gap: 50px;
   font-size: 14px;
   color: var(--color-text-tertiary, #481c15);
   font-weight: 800;

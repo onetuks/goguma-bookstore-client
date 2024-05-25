@@ -25,23 +25,19 @@ const moveToMenuTypePage = (menuType: MenuType) => {
 
 <template>
   <div
-      class="property-1"
+      class="menu"
       @click="() => moveToMenuTypePage(menuType)"
   >
-    <div class="frame-1077"></div>
-    <div class="div">{{ menuType }}</div>
+    <div class="menu-idle"></div>
+    <div class="menu-title">{{ menuType }}</div>
     <ForwardButton/>
   </div>
 
 </template>
 
 <style scoped>
-.property-1,
-.property-1 * {
+.menu {
   box-sizing: border-box;
-}
-
-.property-1 {
   border-style: solid;
   border-color: var(--color-border-primary, #e8e6d5);
   border-width: 0 0 1px 0;
@@ -54,7 +50,7 @@ const moveToMenuTypePage = (menuType: MenuType) => {
   position: relative;
 }
 
-.frame-1077 {
+.menu-idle {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -67,7 +63,7 @@ const moveToMenuTypePage = (menuType: MenuType) => {
   position: relative;
 }
 
-.div {
+.menu-title {
   color: var(--color-text-black, #000000);
   text-align: left;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;

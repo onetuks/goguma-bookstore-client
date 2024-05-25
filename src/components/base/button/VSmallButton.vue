@@ -11,14 +11,14 @@ defineProps<{
 <template>
   <button
       :class="buttonState"
-      class="property-wrapper"
+      class="small-button"
   >
     {{ buttonName }}
   </button>
 </template>
 
 <style scoped>
-.property-wrapper {
+.small-button {
   background-color: transparent;
   align-items: center;
   border: 1px solid;
@@ -33,17 +33,17 @@ defineProps<{
   text-align: center;
 }
 
-.property-wrapper.default {
+.small-button.default {
   border-color: var(--color-button-primary);
   color: var(--color-text-black);
 }
 
-.property-wrapper.disabled {
+.small-button.disabled {
   border-color: var(--color-button-fourth);
   color: var(--color-text-fifth);
 }
 
-.property-wrapper.emphasis {
+.small-button.emphasis {
   border-color: var(--color-button-secondary);
   color: var(--color-text-black);
 }

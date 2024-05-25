@@ -4,7 +4,7 @@
 
 <template>
   <svg
-      class="div"
+      class="error-icon"
       width="90"
       height="90"
       viewBox="0 0 90 90"
@@ -26,11 +26,8 @@
 </template>
 
 <style scoped>
-.div,
-.div * {
+.error-icon {
   box-sizing: border-box;
-}
-.div {
   width: 90px;
   height: 90px;
   position: relative;

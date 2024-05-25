@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-wrapper">
+  <div class="history-button">
     <svg
         class="history"
         fill="none"
@@ -28,12 +28,8 @@ defineProps<{
 </template>
 
 <style scoped>
-.property-wrapper,
-.property-wrapper * {
+.history-button {
   box-sizing: border-box;
-}
-
-.property-wrapper {
   border-style: solid;
   border-color: var(--color-text-white, #ffffff);
   border-width: 0 2px 0 0;

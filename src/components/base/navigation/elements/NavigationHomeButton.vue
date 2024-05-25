@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-wrapper">
+  <div class="home-button">
     <svg
         class="home"
         fill="none"
@@ -25,12 +25,8 @@ defineProps<{
 </template>
 
 <style scoped>
-.property-wrapper,
-.property-wrapper * {
+.home-button {
   box-sizing: border-box;
-}
-
-.property-wrapper {
   padding: 6px 26px 6px 26px;
   display: flex;
   flex-direction: column;

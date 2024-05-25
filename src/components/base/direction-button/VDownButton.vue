@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="frame-1105">
+  <div class="down-button">
     <svg
-        class="div2"
+        class="down-button-icon"
         width="18"
         height="10"
         viewBox="0 0 18 10"
@@ -21,7 +21,7 @@
 </template>
 
 <style scoped>
-.frame-1105 {
+.down-button {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -32,7 +32,7 @@
   height: auto;
   position: relative;
 }
-.div2 {
+.down-button-icon {
   flex-shrink: 0;
   width: 15px;
   height: 10px;
