@@ -1,6 +1,20 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h4>팝업</h4>
+    <h6>확인팝업</h6>
+    <VConfirmPopup
+        message="만나서 반가워요!"
+        confirm-button-text="확인"
+    />
+    <h6>확인취소팝업</h6>
+    <VConfirmCancelPopup
+        message="주문하실거에요?"
+        confirm-button-text="네"
+        cancel-button-text="아니요"
+    />
+  </div>
+  <div>
     <h4>상품리스트</h4>
     <BookListItem
         cover-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
@@ -225,9 +239,13 @@ import VErrorIcon from "@/components/base/error/VErrorIcon.vue";
 import BookDetailCard from "@/components/book/detail/card/BookDetailCard.vue";
 import ReviewDetailCard from "@/components/review/detail/ReviewDetailCard.vue";
 import BookListItem from "@/components/book/list/BookListItem.vue";
+import VConfirmPopup from "@/components/base/popup/VConfirmPopup.vue";
+import VConfirmCancelPopup from "@/components/base/popup/VConfirmCancelPopup.vue";
 
 @Options({
   components: {
+    VConfirmCancelPopup,
+    VConfirmPopup,
     BookListItem,
     ReviewDetailCard,
     BookDetailCard,
