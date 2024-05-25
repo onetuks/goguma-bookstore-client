@@ -1,6 +1,27 @@
 <template>
   <h1>공용 컴포넌트</h1>
   <div>
+    <h3>후기 카드</h3>
+    <ReviewDetailCard
+        author-nickname="홍길동"
+        profile-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        review-score="4"
+        content="이 책은 정말 좋아요. 추천합니다."
+    />
+    <br>
+    <ReviewDetailCard
+        author-nickname="홍길동"
+        profile-img-url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        review-score="4"
+        content="이 책은 정말 좋아요. 추천합니다."
+        :review-img-urls="[
+            'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+            'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+            'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+        ]"
+    />
+  </div>
+  <div>
     <h4>상품정보 카드</h4>
     <BookDetailCard
         :book-id="1"
@@ -190,9 +211,11 @@ import VLabel from "@/components/base/label/VLabel.vue";
 import BookSaleButton from "@/components/book/BookSaleButton.vue";
 import VErrorIcon from "@/components/base/error/VErrorIcon.vue";
 import BookDetailCard from "@/components/book/detail/card/BookDetailCard.vue";
+import ReviewDetailCard from "@/components/review/detail/ReviewDetailCard.vue";
 
 @Options({
   components: {
+    ReviewDetailCard,
     BookDetailCard,
     VErrorIcon,
     BookSaleButton,

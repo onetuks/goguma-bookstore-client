@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import BookDetailCardReviewStars from "@/components/book/detail/card/BookDetailCardReviewStars.vue";
+import BookDetailCardReviewStars from "@/components/base/star/VReviewStars.vue";
 import BookDetailCardPrice from "@/components/book/detail/card/BookDetailCardRegularPrice.vue";
 import BookDetailCardDeliveryFee from "@/components/book/detail/card/BookDetailCardDeliveryFee.vue";
 import VZzimKongButton from "@/components/base/zzim/VZzimKongButton.vue";
