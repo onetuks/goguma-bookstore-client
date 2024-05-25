@@ -26,23 +26,12 @@ defineProps<{
 
 <style scoped>
 .home-button {
+  padding: 20px;
   box-sizing: border-box;
-  padding: 6px 26px 6px 26px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   position: relative;
+  height: 100%;
 }
-
-.home {
-  flex-shrink: 0;
-  width: 25px;
-  height: 23px;
-  position: relative;
-  overflow: visible;
-}
-
 </style>

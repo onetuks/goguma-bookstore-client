@@ -40,13 +40,15 @@ const copyCurrentUrlToClipboard = () => {
   border-style: solid;
   border-color: var(--color-border-tertiary, #756357);
   border-width: 1px;
-  padding: 6px;
+  padding: 1px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 26px;
+  height: 26px;
   position: relative;
 }
 .copy-link-icon {

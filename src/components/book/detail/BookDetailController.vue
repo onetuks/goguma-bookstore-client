@@ -3,32 +3,29 @@
 </script>
 
 <template>
-  <div class="div">
-    <div class="div2">관련상품</div>
-    <div class="div2">상품 설명</div>
-    <div class="div2">상품후기</div>
+  <div class="book-detail-controller-wrapper">
+    <div class="book-detail-controller-button">관련상품</div>
+    <div class="book-detail-controller-button">상품 설명</div>
+    <div class="book-detail-controller-button">상품후기</div>
   </div>
 
 </template>
 
 <style scoped>
-.div,
-.div * {
+.book-detail-controller-wrapper {
   box-sizing: border-box;
-}
-.div {
   border-style: solid;
   border-color: var(--color-border-primary, #e8e6d5);
   border-width: 0 0 1px 0;
-  padding: 10px 0 10px 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  width: 300px;
+  width: 100%;
   position: relative;
 }
-.div2 {
+.book-detail-controller-button {
+  padding: 10px 0;
   color: #000000;
   text-align: center;
   font-family: var(--font-family, "NanumSquare-Regular"), sans-serif;

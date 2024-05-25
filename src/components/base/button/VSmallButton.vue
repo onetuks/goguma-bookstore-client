@@ -24,7 +24,6 @@ defineProps<{
   border: 1px solid;
   border-radius: 10px;
   display: flex;
-  gap: 10px;
   width: 100%;
   height: 30px;
   justify-content: center;

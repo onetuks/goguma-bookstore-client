@@ -14,11 +14,11 @@ import VLabel from "@/components/base/label/VLabel.vue";
 import VRadioBox from "@/components/base/radiobox/VRadioBox.vue";
 import BookDetailController from "@/components/book/detail/BookDetailController.vue";
 import VSelectBox from "@/components/base/selectbox/VSelectBox.vue";
-import ReviewStars from "@/components/review/ReviewStars.vue";
+import ReviewStars from "@/components/review/SettableReviewStars.vue";
 import MenuItem from "@/components/base/menu/MenuItem.vue";
 import TheHeaderBar from "@/components/base/header/TheHeaderBar.vue";
 import TheScmHeaderBar from "@/components/base/header/TheScmHeaderBar.vue";
-import VAlarmIcon from "@/components/base/alarm/VAlarmIcon.vue";
+import VAlarmIcon from "@/components/base/alarm/VAlarmButton.vue";
 import VPlayButton from "@/components/music/VPlayButton.vue";
 import VDeliveryStatusLabel from "@/components/base/label/VDeliveryStatusLabel.vue";
 import VInquiryStatusLabel from "@/components/base/label/VInquiryStatusLabel.vue";
@@ -117,6 +117,7 @@ import VCheckBox from "@/components/base/checkbox/VCheckBox.vue";
         :sales-rate="10"
         :stock-count="4"
         :review-score="3.4"/>
+    <br>
     <BookDetailCard
         :book-id="1"
         title="안녕둔촌주공아파트"
@@ -242,18 +243,23 @@ import VCheckBox from "@/components/base/checkbox/VCheckBox.vue";
     <div>
       <h5>소버튼</h5>
       <VSmallButton button-name='버튼' button-state="default"/>
+      <br>
       <VSmallButton button-name='버튼' button-state="disabled"/>
+      <br>
       <VSmallButton button-name='버튼' button-state="emphasis"/>
     </div>
     <div>
       <h5>대버튼</h5>
       <VBigButton button-name='버튼' button-state="default"/>
+      <br>
       <VBigButton button-name='버튼' button-state="disabled"/>
+      <br>
       <VBigButton button-name='버튼' button-state="emphasis"/>
     </div>
     <div>
       <h5>구독버튼</h5>
       <VSubscribeButton :is-subscribed='true'/>
+      <br>
       <VSubscribeButton :is-subscribed='false'/>
     </div>
     <hr>

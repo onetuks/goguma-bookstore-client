@@ -5,9 +5,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="favorite-button">
+  <div class="favorite-button-wrapper">
     <svg
-        class="favorite"
         fill="none"
         height="27"
         viewBox="0 0 28 27"
@@ -25,27 +24,11 @@ defineProps<{
 </template>
 
 <style scoped>
-.favorite-button {
-  box-sizing: border-box;
-  border-style: solid;
-  border-color: var(--color-text-white, #ffffff);
-  border-width: 0 2px 0 0;
-  padding: 4px 26px 4px 26px;
+.favorite-button-wrapper {
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  position: relative;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
+  height: 100%;
 }
-
-.favorite {
-  flex-shrink: 0;
-  width: 28px;
-  height: 27px;
-  position: relative;
-  overflow: visible;
-}
-
 </style>

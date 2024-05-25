@@ -18,13 +18,11 @@ defineProps<{
   background-color: transparent;
   border: 1px solid;
   border-radius: 10px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   width: 80px;
   height: 30px;
   position: relative;

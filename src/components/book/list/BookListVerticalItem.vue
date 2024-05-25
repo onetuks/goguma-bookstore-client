@@ -12,18 +12,18 @@ defineProps<{
 </script>
 
 <template>
-  <div class="div">
+  <div class="book-list-vertical-item-wrapper">
     <img
         loading="lazy"
         src="{{coverImgUrl}}"
         class="img"
         alt="book-cover-image"
     />
-    <div class="div-2">{{title}}</div>
-    <div class="div-3">
-      <div class="div-4">
-        <div class="div-5">{{publisher}}</div>
-        <div class="div-6">{{ formatDiscountedPrice(price, salesRate) }}</div>
+    <div class="title-frame">{{title}}</div>
+    <div class="book-info-frame">
+      <div class="book-info-detail-frame">
+        <div class="publisher-frame">{{publisher}}</div>
+        <div class="price-frame">{{ formatDiscountedPrice(price, salesRate) }}</div>
       </div>
       <VZzimKongButton :is-zzim="true" />
     </div>
@@ -31,7 +31,7 @@ defineProps<{
 </template>
 
 <style scoped>
-.div {
+.book-list-vertical-item-wrapper {
   border-radius: 20px;
   border-color: rgba(232, 230, 213, 1);
   border-style: solid;
@@ -52,13 +52,13 @@ defineProps<{
   align-self: center;
 }
 
-.div-2 {
+.title-frame {
   color: var(--color-text-fourth, #756357);
   margin-top: 10px;
   font: 800 16px NanumSquare, sans-serif;
 }
 
-.div-3 {
+.book-info-frame {
   justify-content: space-between;
   display: flex;
   gap: 20px;
@@ -66,18 +66,18 @@ defineProps<{
   width: 100%;
 }
 
-.div-4 {
+.book-info-detail-frame {
   display: flex;
   align-items: start;
   flex-direction: column;
 }
 
-.div-5 {
+.publisher-frame {
   color: #000;
   font: 400 12px NanumSquare, sans-serif;
 }
 
-.div-6 {
+.price-frame {
   color: var(--color-text-tertiary, #481c15);
   font: 800 14px NanumSquare, sans-serif;
 }

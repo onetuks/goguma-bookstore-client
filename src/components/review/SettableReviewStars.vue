@@ -9,11 +9,11 @@ const clickStar = (index: number) => {
 </script>
 
 <template>
-  <div class="_3">
+  <div class="settable-review-stars-wrapper">
     <svg
         v-for="index in 5"
         :key="index"
-        class="div"
+        class="settable-review-star"
         fill="none"
         viewBox="0 0 21 21"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,12 +30,12 @@ const clickStar = (index: number) => {
 </template>
 
 <style scoped>
-._3,
-._3 * {
+.settable-review-stars-wrapper,
+.settable-review-stars-wrapper * {
   box-sizing: border-box;
 }
 
-._3 {
+.settable-review-stars-wrapper {
   display: flex;
   flex-direction: row;
   gap: 0;
@@ -44,12 +44,12 @@ const clickStar = (index: number) => {
   position: relative;
 }
 
-.div,
-.div * {
+.settable-review-star,
+.settable-review-star * {
   box-sizing: border-box;
 }
 
-.div {
+.settable-review-star {
   flex-shrink: 0;
   width: 21px;
   height: 21px;

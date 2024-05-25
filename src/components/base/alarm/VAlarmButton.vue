@@ -37,13 +37,6 @@ const moveToAlarmPage = () => {
 </template>
 
 <style scoped>
-.valarm {
-  box-sizing: border-box;
-  width: 18px;
-  height: 21px;
-  position: relative;
-}
-
 .valarm-wrapper {
   padding: 10px;
   display: flex;
@@ -52,8 +45,15 @@ const moveToAlarmPage = () => {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.valarm {
+  box-sizing: border-box;
+  width: 18px;
+  height: 21px;
   position: relative;
 }
 

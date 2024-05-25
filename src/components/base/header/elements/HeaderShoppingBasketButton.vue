@@ -8,11 +8,11 @@ const moveToShoppingBasketPage = () => {
 
 <template>
   <div
-      class="shopping-basket-button"
+      class="shopping-basket-button-wrapper"
       @click="moveToShoppingBasketPage"
   >
     <svg
-        class="shopping-basket-button-icon"
+        class="shopping-basket-icon"
         fill="none"
         height="22"
         viewBox="0 0 16 22"
@@ -30,7 +30,7 @@ const moveToShoppingBasketPage = () => {
 </template>
 
 <style scoped>
-.shopping-basket-button {
+.shopping-basket-button-wrapper {
   background: rgba(255, 255, 255, 0);
   padding: 10px;
   display: flex;
@@ -39,12 +39,12 @@ const moveToShoppingBasketPage = () => {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: relative;
 }
 
-.shopping-basket-button-icon {
+.shopping-basket-icon {
   flex-shrink: 0;
   width: 15px;
   height: 20px;

@@ -11,16 +11,14 @@ defineProps<{
 
 <template>
   <div class="book-main-recommend-card">
-    <div class="frame-1492">
-      <img class="frame-1114"
+    <div class="book-card-frame">
+      <img class="image-frame"
            src="{{coverImgUrl}}"
            alt="book-cover"/>
     </div>
-    <div class="frame-1477">
-      <div class="div2">{{ title }}</div>
-      <div class="frame-1475">
-        <div class="_14-500">{{ formatDiscountedPrice(price, salesRate) }}</div>
-      </div>
+    <div class="book-info-frame">
+      <div class="title-frame">{{ title }}</div>
+      <div class="price-frame">{{ formatDiscountedPrice(price, salesRate) }}</div>
     </div>
   </div>
 
@@ -49,7 +47,7 @@ defineProps<{
   position: relative;
 }
 
-.frame-1492 {
+.book-card-frame {
   background: var(--color-surface-fifth, #ffffff);
   border-radius: 20px;
   border-style: solid;
@@ -63,7 +61,7 @@ defineProps<{
   overflow: hidden;
 }
 
-.frame-1114 {
+.image-frame {
   border-radius: 7.7px;
   width: 115px;
   height: 170px;
@@ -74,7 +72,7 @@ defineProps<{
   object-fit: cover;
 }
 
-.frame-1477 {
+.book-info-frame {
   padding: 0 10px 0 10px;
   display: flex;
   flex-direction: column;
@@ -86,7 +84,7 @@ defineProps<{
   position: relative;
 }
 
-.div2 {
+.title-frame {
   color: var(--color-text-fourth, #756357);
   text-align: left;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
@@ -98,22 +96,18 @@ defineProps<{
   overflow: hidden;
 }
 
-.frame-1475 {
+.price-frame {
   display: flex;
   flex-direction: column;
-  gap: 2.76px;
+  gap: 3px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-}
-
-._14-500 {
   color: var(--color-text-tertiary, #481c15);
   text-align: left;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-14, 14px);
-  position: relative;
   align-self: stretch;
 }
 

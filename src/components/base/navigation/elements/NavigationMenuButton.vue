@@ -7,7 +7,6 @@ defineProps<{
 <template>
   <div class="menu-button">
     <svg
-        class="menu"
         fill="none"
         height="15"
         viewBox="0 0 25 15"
@@ -33,26 +32,12 @@ defineProps<{
 
 <style scoped>
 .menu-button {
+  padding: 20px;
   box-sizing: border-box;
-  border-style: solid;
-  border-color: var(--color-text-white, #ffffff);
-  border-width: 0 2px;
-  padding: 10px 26px 10px 26px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   position: relative;
+  height: 100%;
 }
-
-.menu {
-  flex-shrink: 0;
-  width: 25px;
-  height: 15px;
-  position: relative;
-  overflow: visible;
-}
-
 </style>

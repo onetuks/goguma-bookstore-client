@@ -28,9 +28,8 @@ defineProps<{
   border-width: 0 0 1px 0;
   display: flex;
   flex-direction: row;
-  gap: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 50px;
   position: relative;
 }
@@ -41,6 +40,5 @@ defineProps<{
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-20, 20px);
   position: relative;
-  flex: 1;
 }
 </style>

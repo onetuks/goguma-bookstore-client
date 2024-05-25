@@ -14,20 +14,33 @@ const convertDProperty = () => {
 </script>
 
 <template>
-  <svg
-      class="zzim-kong-icon"
-      xmlns="http://www.w3.org/2000/svg"
-      @click="convertDProperty">
-    <path
-        :d="zzimed ? ACTIVE_D_PROPERTY : INACTIVE_D_PROPERTY"
-        clip-rule="evenodd"
-        fill="#6A3E37"
-        fill-rule="evenodd"
-    />
-  </svg>
+  <div class="zzim-kong-button-wrapper"
+       @click="convertDProperty"
+  >
+    <svg
+        class="zzim-kong-icon"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+          :d="zzimed ? ACTIVE_D_PROPERTY : INACTIVE_D_PROPERTY"
+          clip-rule="evenodd"
+          fill="#6A3E37"
+          fill-rule="evenodd"
+      />
+    </svg>
+  </div>
 </template>
 
 <style scoped>
+
+.zzim-kong-button-wrapper {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
 
 .zzim-kong-icon {
   background-size: 100% 100%;

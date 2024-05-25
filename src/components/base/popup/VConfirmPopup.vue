@@ -6,42 +6,34 @@ defineProps<{
 </script>
 
 <template>
-  <div class="div">
-    <div class="div-2">
-      <div class="div-3">{{message}}</div>
-      <div class="div-4"
-      >{{confirmButtonText}}</div>
-    </div>
+  <div class="popup-wrapper">
+    <div class="message-frame">{{ message }}</div>
+    <div class="button-frame">{{ confirmButtonText }}</div>
   </div>
 </template>
 
 <style scoped>
-.div {
+.popup-wrapper {
   border-color: rgba(232, 230, 213, 1);
   border-style: solid;
   border-width: 1px;
   display: flex;
-  max-width: 330px;
   flex-direction: column;
   font-weight: 800;
   text-align: center;
   justify-content: center;
-}
-
-.div-2 {
   background-color: var(--color-surface-tertiary, #f4f3ec);
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+  width: auto;
   padding: 20px 30px;
 }
 
-.div-3 {
+.message-frame {
   color: var(--color-text-fourth, #756357);
-  font: 14px NanumSquare, sans-serif;
+  font-family: NanumSquare, sans-serif;
+  font-weight: 800;
 }
 
-.div-4 {
+.button-frame {
   justify-content: center;
   align-items: center;
   border-radius: 15px;

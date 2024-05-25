@@ -2,6 +2,7 @@
 import VLabel from "@/components/base/label/VLabel.vue";
 import VZzimKongButton from "@/components/base/zzim/VZzimKongButton.vue";
 import {Category} from "@/components/book/Category";
+import {formatDiscountedPrice, formatPrice} from "../price/PriceCalculator";
 
 defineProps<{
   title: string,
@@ -15,25 +16,20 @@ defineProps<{
 </script>
 
 <template>
-  <div class="div">
-    <img
-        loading="lazy"
-        srcSet="..."
-        class="img"
-        alt="cover-img-url"
-    />
-    <div class="div-2">
-      <div class="div-3">안녕, 둔촌주공아파트</div>
-      <div class="div-4">이인규, 라야</div>
-      <div class="div-5">
-        <div class="div-6">
-          <div class="div-7">14,900</div>
-          <div class="div-8">원</div>
-        </div>
-        <div class="div-9">14,900원</div>
+  <div class="book-list-horizontal-item-wrapper">
+    <img loading="lazy"
+         src="{{coverImgUrl}}"
+         class="img"
+         alt="cover-img-url"/>
+    <div class="book-list-horizontal-info-frame">
+      <div class="title-frame">안녕, 둔촌주공아파트</div>
+      <div class="nickname-frame">이인규, 라야</div>
+      <div class="price-frame">
+        <div class="purchase-price-frame">{{ formatDiscountedPrice(price, salesRate) }} 원</div>
+        <div class="regular-price-frame">{{ formatPrice(price) }}원</div>
       </div>
-      <div class="div-10">
-        <div class="div-11">
+      <div class="book-list-horizontal-bottom-frame">
+        <div class="category-frame">
           <VLabel v-for="(category, index) in categories"
                   :key="index"
                   :label-type="category"/>
@@ -45,7 +41,7 @@ defineProps<{
 </template>
 
 <style scoped>
-.div {
+.book-list-horizontal-item-wrapper {
   border-radius: 20px;
   border-color: rgba(232, 230, 213, 1);
   border-style: solid;
@@ -64,54 +60,42 @@ defineProps<{
   max-width: 100%;
 }
 
-.div-2 {
+.book-list-horizontal-info-frame {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.div-3 {
+.title-frame {
   color: var(--color-text-fourth, #756357);
   font: 800 16px NanumSquare, sans-serif;
 }
 
-.div-4 {
+.nickname-frame {
   color: #000;
   margin-top: 5px;
   font: 400 14px/143% NanumSquare, sans-serif;
 }
 
-.div-5 {
+.price-frame {
   justify-content: end;
   display: flex;
   margin-top: 10px;
   gap: 10px;
   white-space: nowrap;
-}
-
-.div-6 {
-  display: flex;
-  gap: 3px;
   font-size: 14px;
   color: var(--color-text-tertiary, #481c15);
+  font-family: NanumSquare, sans-serif;
   font-weight: 800;
 }
 
-.div-7 {
-  font-family: NanumSquare, sans-serif;
-}
-
-.div-8 {
-  font-family: NanumSquare, sans-serif;
-}
-
-.div-9 {
+.regular-price-frame {
   color: var(--color-text-fifth, #c8c8c8);
   text-decoration-line: line-through;
   font: 400 12px NanumSquare, sans-serif;
 }
 
-.div-10 {
+.book-list-horizontal-bottom-frame {
   display: flex;
   margin-top: 40px;
   width: 100%;
@@ -123,7 +107,7 @@ defineProps<{
   justify-content: space-between;
 }
 
-.div-11 {
+.category-frame {
   display: flex;
   gap: 5px;
 }

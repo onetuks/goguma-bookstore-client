@@ -5,6 +5,7 @@ import NavigationMyPageButton from "@/components/base/navigation/elements/Naviga
 import NavigationFavoriteButton from "@/components/base/navigation/elements/NavigationFavoriteButton.vue";
 import NavigationHomeButton from "@/components/base/navigation/elements/NavigationHomeButton.vue";
 import {ref} from "vue";
+import NavigationDivider from "@/components/base/navigation/elements/NavigationDivider.vue";
 
 type NavigationType = 'menu' | 'history' | 'mypage' | 'favorite' | 'home';
 
@@ -21,18 +22,22 @@ const handleClick = (navigationTypeName: NavigationType) => {
         :active="activeNavigation === 'menu'"
         @click="() => handleClick('menu')"
     />
+    <NavigationDivider/>
     <NavigationHistoryButton
         :active="activeNavigation === 'history'"
         @click="() => handleClick('history')"
     />
+    <NavigationDivider/>
     <NavigationMyPageButton
         :active="activeNavigation === 'mypage'"
         @click="() => handleClick('mypage')"
     />
+    <NavigationDivider/>
     <NavigationFavoriteButton
         :active="activeNavigation === 'favorite'"
         @click="() => handleClick('favorite')"
     />
+    <NavigationDivider/>
     <NavigationHomeButton
         :active="activeNavigation === 'home'"
         @click="() => handleClick('home')"
@@ -49,10 +54,10 @@ const handleClick = (navigationTypeName: NavigationType) => {
   border-style: solid;
   border-color: var(--color-button-primary, #e1ddcb);
   border-width: 1px 0 0 0;
-  padding: 17px 1px 17px 1px;
   display: flex;
   flex-direction: row;
-  gap: 0;
+  height: 70px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   position: relative;

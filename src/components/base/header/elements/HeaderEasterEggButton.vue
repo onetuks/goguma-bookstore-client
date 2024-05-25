@@ -22,15 +22,9 @@ const moveToEasterEggPage = () => {
 
 <style scoped>
 .easter-egg-button {
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: relative;
+  padding: 10px;
 }
 </style>

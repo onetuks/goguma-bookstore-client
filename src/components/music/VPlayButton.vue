@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="play-button">
+  <div class="play-button-wrapper">
     <svg
-        class="polygon-2"
+        class="play-button-icon"
         fill="none"
         height="16"
         viewBox="0 0 16 16"
@@ -22,12 +22,8 @@
 </template>
 
 <style scoped>
-.play-button,
-.play-button * {
+.play-button-wrapper {
   box-sizing: border-box;
-}
-
-.play-button {
   background: #a9a9a9;
   border-radius: 20px;
   display: flex;
@@ -40,7 +36,7 @@
   position: relative;
 }
 
-.polygon-2 {
+.play-button-icon {
   flex-shrink: 0;
   width: 16px;
   height: 16px;

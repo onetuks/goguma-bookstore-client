@@ -7,7 +7,6 @@ defineProps<{
 <template>
   <div class="mypage-button">
     <svg
-        class="my-page"
         fill="none"
         height="25"
         viewBox="0 0 25 25"
@@ -33,26 +32,12 @@ defineProps<{
 
 <style scoped>
 .mypage-button {
+  padding: 20px;
   box-sizing: border-box;
-  border-style: solid;
-  border-color: var(--color-text-white, #ffffff);
-  border-width: 0px 2px 0px 0px;
-  padding: 5px 26px 5px 26px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   position: relative;
+  height: 100%;
 }
-
-.my-page {
-  flex-shrink: 0;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  overflow: visible;
-}
-
 </style>

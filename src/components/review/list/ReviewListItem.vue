@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import VReviewStars from "@/components/base/star/VReviewStars.vue";
+import VSmallButton from "@/components/base/button/VSmallButton.vue";
 
 defineProps<{
   coverImgUrl: string,
@@ -10,25 +11,17 @@ defineProps<{
 </script>
 
 <template>
-  <div class="div">
-    <img class="frame-1079"
+  <div class="review-list-item-wrapper">
+    <img class="image-frame"
          src="{{coverImgUrl}}"
          alt="book-cover-img"/>
-    <div class="frame-1487">
-      <div class="frame-1465">
-        <div class="frame-1461">
-          <div class="div2">{{ title }}</div>
-        </div>
-        <VReviewStars :review-score="reviewScore"/>
-      </div>
-      <div class="div8">{{ content }}</div>
-      <div class="frame-1486">
-        <div class="div9">
-          <div class="div10">삭제</div>
-        </div>
-        <div class="div9">
-          <div class="div10">수정</div>
-        </div>
+    <div class="review-info">
+      <div class="title-frame">{{ title }}</div>
+      <VReviewStars :review-score="reviewScore"/>
+      <div class="content-frame">{{ content }}</div>
+      <div class="button-frame">
+        <VSmallButton button-name="삭제" button-state="default"/>
+        <VSmallButton button-name="수정" button-state="default"/>
       </div>
     </div>
   </div>
@@ -36,12 +29,8 @@ defineProps<{
 </template>
 
 <style scoped>
-.div,
-.div * {
+.review-list-item-wrapper {
   box-sizing: border-box;
-}
-
-.div {
   background: var(--color-surface-tertiary, #f4f3ec);
   border-radius: 20px;
   border-style: solid;
@@ -56,7 +45,7 @@ defineProps<{
   position: relative;
 }
 
-.frame-1079 {
+.image-frame {
   border-radius: 10px;
   flex-shrink: 0;
   width: 105px;
@@ -66,7 +55,7 @@ defineProps<{
   object-fit: cover;
 }
 
-.frame-1487 {
+.review-info {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -77,7 +66,7 @@ defineProps<{
   position: relative;
 }
 
-.frame-1465 {
+.title-frame {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -86,79 +75,15 @@ defineProps<{
   flex-shrink: 0;
   width: 225px;
   position: relative;
-}
 
-.frame-1461 {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 225px;
-  position: relative;
-}
-
-.div2 {
   color: var(--color-text-fourth, #756357);
   text-align: left;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-16, 16px);
-  position: relative;
   align-self: stretch;
 }
 
-.frame-1161 {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.div3 {
-  flex-shrink: 0;
-  width: 21px;
-  height: 21px;
-  position: relative;
-  overflow: visible;
-}
-
-.div4 {
-  flex-shrink: 0;
-  width: 21px;
-  height: 21px;
-  position: relative;
-  overflow: visible;
-}
-
-.div5 {
-  flex-shrink: 0;
-  width: 21px;
-  height: 21px;
-  position: relative;
-  overflow: visible;
-}
-
-.div6 {
-  flex-shrink: 0;
-  width: 21px;
-  height: 21px;
-  position: relative;
-  overflow: visible;
-}
-
-.div7 {
-  flex-shrink: 0;
-  width: 21px;
-  height: 21px;
-  position: relative;
-  overflow: visible;
-}
-
-.div8 {
+.content-frame {
   color: #000000;
   text-align: left;
   font-family: var(--font-family, "NanumSquare-Regular"), sans-serif;
@@ -172,7 +97,8 @@ defineProps<{
   overflow: hidden;
 }
 
-.frame-1486 {
+.button-frame {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -180,35 +106,6 @@ defineProps<{
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-}
-
-.div9 {
-  border-radius: 10px;
-  border-style: solid;
-  border-color: var(--color-button-primary, #e1ddcb);
-  border-width: 1px;
-  padding: 5px 10px 5px 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 110px;
-  height: 30px;
-  position: relative;
-}
-
-.div10 {
-  color: var(--color-text-black, #000000);
-  text-align: center;
-  font-family: var(--font-family-bold, "NanumSquare-Bold"), sans-serif;
-  font-size: var(--font-size-14, 14px);
-  position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 </style>

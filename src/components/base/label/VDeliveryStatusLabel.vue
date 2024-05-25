@@ -7,35 +7,19 @@ defineProps<{
 </script>
 
 <template>
-  <div class="history-button">
-    <div class="delivery-status">
-      {{ status }}
-    </div>
-  </div>
+  <div class="delivery-status-label-wrapper">{{ status }}</div>
 
 </template>
 
 <style scoped>
-.history-button,
-.history-button * {
+.delivery-status-label-wrapper {
   box-sizing: border-box;
-}
-
-.history-button {
   width: 65px;
   height: 20px;
   position: relative;
-}
-
-.delivery-status {
   color: var(--color-text-black, #000000);
   text-align: left;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-14, 14px);
-  position: absolute;
-  width: 100%;
-  bottom: 20%;
-  height: 80%;
 }
-
 </style>

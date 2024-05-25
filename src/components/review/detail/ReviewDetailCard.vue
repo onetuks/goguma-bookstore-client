@@ -11,40 +11,31 @@ defineProps<{
 </script>
 
 <template>
-  <div class="property-1">
-    <div class="frame-1417">
-      <div class="frame-1415">
-        <img class="frame-1412"
+  <div class="review-detail-card-wrapper">
+      <div class="review-header-frame">
+        <img class="profile-image"
              src="{{profileImgUrl}}"
              alt="profile-img"/>
-        <div class="frame-1414">
-          <div class="frame-1413">
-            <div class="div">{{ authorNickname }}</div>
-          </div>
+        <div class="review-info-frame">
+          <div class="nickname-frame">{{ authorNickname }}</div>
           <VReviewStars :review-score="reviewScore"/>
         </div>
       </div>
-      <div class="div7">{{ content }}</div>
+      <div class="content-frame">{{ content }}</div>
       <div v-if="reviewImgUrls === undefined || reviewImgUrls.length > 0"
-           class="frame-1416">
+           class="review-profile-image">
         <img v-for="reviewImgUrl in reviewImgUrls"
              :key="reviewImgUrl"
              :src="reviewImgUrl"
              alt="review-img"
-             class="rectangle-70"/>
+             class="review-image"/>
       </div>
     </div>
-  </div>
-
 </template>
 
 <style scoped>
-.property-1,
-.property-1 * {
+.review-detail-card-wrapper {
   box-sizing: border-box;
-}
-
-.property-1 {
   background: var(--color-surface-tertiary, #f4f3ec);
   border-radius: 20px;
   border-style: solid;
@@ -52,24 +43,15 @@ defineProps<{
   border-width: 1px;
   padding: 10px;
   display: flex;
-  flex-direction: row;
-  gap: 10px;
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-}
-
-.frame-1417 {
-  display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-shrink: 0;
-  position: relative;
 }
 
-.frame-1415 {
+.review-header-frame {
   display: flex;
   flex-direction: row;
   gap: 11px;
@@ -80,7 +62,7 @@ defineProps<{
   position: relative;
 }
 
-.frame-1412 {
+.profile-image {
   border-radius: 25px;
   flex-shrink: 0;
   width: 50px;
@@ -90,7 +72,7 @@ defineProps<{
   object-fit: cover;
 }
 
-.frame-1414 {
+.review-info-frame {
   display: flex;
   flex-direction: column;
   gap: 11px;
@@ -100,7 +82,7 @@ defineProps<{
   position: relative;
 }
 
-.frame-1413 {
+.nickname-frame {
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -108,20 +90,13 @@ defineProps<{
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-}
-
-.div {
   color: #000000;
   text-align: center;
   font-family: var(--font-family-extra-bold, "NanumSquare-ExtraBold"), sans-serif;
   font-size: var(--font-size-16, 16px);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.div7 {
+.content-frame {
   color: #000000;
   text-align: left;
   font-family: var(--font-family, "NanumSquare-Regular"), sans-serif;
@@ -132,7 +107,7 @@ defineProps<{
   height: 200px;
 }
 
-.frame-1416 {
+.review-profile-image {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -142,7 +117,7 @@ defineProps<{
   position: relative;
 }
 
-.rectangle-70 {
+.review-image {
   background: linear-gradient(to left, #d9d9d9, #d9d9d9);
   border-radius: 10px;
   flex-shrink: 0;

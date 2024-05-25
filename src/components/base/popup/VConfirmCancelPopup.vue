@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import VSmallButton from "@/components/base/button/VSmallButton.vue";
+
 defineProps<{
   message: string,
   confirmButtonText: string,
@@ -7,46 +9,37 @@ defineProps<{
 </script>
 
 <template>
-  <div class="div">
-    <div class="div-2">
-      <div class="div-3">{{ message }}</div>
-      <div class="div-4">
-        <div class="div-5">{{ confirmButtonText }}</div>
-        <div class="div-5">{{ cancelButtonText }}</div>
-      </div>
+  <div class="popup-wrapper">
+    <div class="message-frame">{{ message }}</div>
+    <div class="button-frame">
+      <VSmallButton button-name="네" button-state="default" />
+      <VSmallButton button-name="아니오" button-state="default" />
     </div>
   </div>
 </template>
 
-
 <style scoped>
-.div {
+.popup-wrapper {
   border-color: rgba(232, 230, 213, 1);
   border-style: solid;
   border-width: 1px;
   display: flex;
-  max-width: 330px;
   flex-direction: column;
-  font-size: 14px;
+  font-weight: 800;
   text-align: center;
   justify-content: center;
-}
-
-.div-2 {
   background-color: var(--color-surface-tertiary, #f4f3ec);
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+  width: auto;
   padding: 20px 30px;
 }
 
-.div-3 {
+.message-frame {
   color: var(--color-text-fourth, #756357);
   font-family: NanumSquare, sans-serif;
   font-weight: 800;
 }
 
-.div-4 {
+.button-frame {
   display: flex;
   margin-top: 20px;
   gap: 10px;
@@ -54,16 +47,5 @@ defineProps<{
   font-weight: 700;
   white-space: nowrap;
   justify-content: center;
-}
-
-.div-5 {
-  font-family: NanumSquare, sans-serif;
-  width: 100%;
-  justify-content: center;
-  border-radius: 10px;
-  border-color: rgba(225, 221, 203, 1);
-  border-style: solid;
-  border-width: 1px;
-  padding: 5px 10px;
 }
 </style>

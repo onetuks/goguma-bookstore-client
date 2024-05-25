@@ -7,7 +7,8 @@ const returnBack = () => {
 </script>
 
 <template>
-  <div @click="returnBack">
+  <div @click="returnBack"
+       class="back-button-wrapper">
     <svg
         class="back-button"
         fill="none"
@@ -25,6 +26,19 @@ const returnBack = () => {
 </template>
 
 <style scoped>
+.back-button-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
 .back-button {
   padding: 10px;
   display: flex;

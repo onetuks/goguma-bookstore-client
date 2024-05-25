@@ -8,7 +8,7 @@ const moveToSearchPage = () => {
 
 <template>
   <div
-      class="search-button"
+      class="search-button-wrapper"
       @click="moveToSearchPage"
   >
     <svg
@@ -31,7 +31,7 @@ const moveToSearchPage = () => {
 
 <style scoped>
 
-.search-button {
+.search-button-wrapper {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -39,8 +39,8 @@ const moveToSearchPage = () => {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: relative;
 }
 
