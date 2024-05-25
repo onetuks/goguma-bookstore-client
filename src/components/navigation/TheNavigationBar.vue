@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import NavigationMenuButton from "@/components/base/navigation/elements/NavigationMenuButton.vue";
-import NavigationHistoryButton from "@/components/base/navigation/elements/NavigationHistoryButton.vue";
-import NavigationMyPageButton from "@/components/base/navigation/elements/NavigationMyPageButton.vue";
-import NavigationFavoriteButton from "@/components/base/navigation/elements/NavigationFavoriteButton.vue";
-import NavigationHomeButton from "@/components/base/navigation/elements/NavigationHomeButton.vue";
+import NavigationMenuButton from "@/components/navigation/elements/NavigationMenuButton.vue";
+import NavigationHistoryButton from "@/components/navigation/elements/NavigationHistoryButton.vue";
+import NavigationMyPageButton from "@/components/navigation/elements/NavigationMyPageButton.vue";
+import NavigationFavoriteButton from "@/components/navigation/elements/NavigationFavoriteButton.vue";
+import NavigationHomeButton from "@/components/navigation/elements/NavigationHomeButton.vue";
 import {ref} from "vue";
-import NavigationDivider from "@/components/base/navigation/elements/NavigationDivider.vue";
+import NavigationDivider from "@/components/navigation/elements/NavigationDivider.vue";
 
 type NavigationType = 'menu' | 'history' | 'mypage' | 'favorite' | 'home';
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VReviewStars from "@/components/base/star/VReviewStars.vue";
+import VReviewStars from "@/components/star/VReviewStars.vue";
 
 defineProps<{
   authorNickname: string,

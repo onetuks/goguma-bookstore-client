@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {formatDiscountedPrice} from "@/components/book/price/PriceCalculator";
-import VZzimKongButton from "@/components/base/zzim/VZzimKongButton.vue";
+import VZzimKongButton from "@/components/zzim/VZzimKongButton.vue";
 
 defineProps<{
     coverImgUrl: string,

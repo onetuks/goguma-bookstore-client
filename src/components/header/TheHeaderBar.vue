@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import VBackButton from "@/components/base/direction-button/VBackButton.vue";
-import HeaderEasterEggButton from "@/components/base/header/elements/HeaderEasterEggButton.vue";
-import HeaderSearchButton from "@/components/base/header/elements/HeaderSearchButton.vue";
-import HeaderShoppingBasketButton from "@/components/base/header/elements/HeaderShoppingBasketButton.vue";
+import VBackButton from "@/components/direction-button/VBackButton.vue";
+import HeaderEasterEggButton from "@/components/header/elements/HeaderEasterEggButton.vue";
+import HeaderSearchButton from "@/components/header/elements/HeaderSearchButton.vue";
+import HeaderShoppingBasketButton from "@/components/header/elements/HeaderShoppingBasketButton.vue";
 
 defineProps<{
   pageTitle: string,

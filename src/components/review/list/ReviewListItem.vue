@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VReviewStars from "@/components/base/star/VReviewStars.vue";
-import VSmallButton from "@/components/base/button/VSmallButton.vue";
+import VReviewStars from "@/components/star/VReviewStars.vue";
+import VSmallButton from "@/components/button/VSmallButton.vue";
 
 defineProps<{
   coverImgUrl: string,
@@ -40,8 +40,9 @@ defineProps<{
   display: flex;
   flex-direction: row;
   gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -61,8 +62,7 @@ defineProps<{
   gap: 5px;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-shrink: 0;
-  width: 225px;
+  width: 100%;
   position: relative;
 }
 
@@ -73,7 +73,6 @@ defineProps<{
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 225px;
   position: relative;
 
   color: var(--color-text-fourth, #756357);
@@ -90,7 +89,6 @@ defineProps<{
   font-size: 12px;
   line-height: 15px;
   position: relative;
-  width: 225px;
   height: 60px;
   max-height: 60px;
   text-overflow: ellipsis;
@@ -98,14 +96,12 @@ defineProps<{
 }
 
 .button-frame {
-  width: 100%;
   display: flex;
-  flex-direction: row;
   gap: 5px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 </style>

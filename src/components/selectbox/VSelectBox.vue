@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onMounted, onUnmounted, ref} from 'vue';
-import VDownButton from "@/components/base/direction-button/VDownButton.vue";
+import VDownButton from "@/components/direction-button/VDownButton.vue";
 
 type SelectBoxType = 'review' | 'book';
 type Option = { value: string; text: string; };

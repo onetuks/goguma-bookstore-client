@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import VBackButton from "@/components/base/direction-button/VBackButton.vue";
-import ScmHeaderMyPageButton from "@/components/base/header/elements/ScmHeaderMyPageButton.vue";
-import VAlarmIcon from "@/components/base/alarm/VAlarmButton.vue";
+import VBackButton from "@/components/direction-button/VBackButton.vue";
+import ScmHeaderMyPageButton from "@/components/header/elements/ScmHeaderMyPageButton.vue";
+import VAlarmIcon from "@/components/alarm/VAlarmButton.vue";
 </script>
 
 <template>

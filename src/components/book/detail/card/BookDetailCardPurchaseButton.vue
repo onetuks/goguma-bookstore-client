@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import VSmallButton from "@/components/base/button/VSmallButton.vue";
+import VSmallButton from "@/components/button/VSmallButton.vue";
 </script>
 
 <template>

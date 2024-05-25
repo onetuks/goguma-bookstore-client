@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VLabel from "@/components/base/label/VLabel.vue";
-import VZzimKongButton from "@/components/base/zzim/VZzimKongButton.vue";
+import VLabel from "@/components/label/VLabel.vue";
+import VZzimKongButton from "@/components/zzim/VZzimKongButton.vue";
 import {Category} from "@/components/book/Category";
 import {formatDiscountedPrice, formatPrice} from "../price/PriceCalculator";
 
@@ -22,8 +22,8 @@ defineProps<{
          class="img"
          alt="cover-img-url"/>
     <div class="book-list-horizontal-info-frame">
-      <div class="title-frame">안녕, 둔촌주공아파트</div>
-      <div class="nickname-frame">이인규, 라야</div>
+      <div class="title-frame">{{title}}</div>
+      <div class="nickname-frame">{{authorNickname}}</div>
       <div class="price-frame">
         <div class="purchase-price-frame">{{ formatDiscountedPrice(price, salesRate) }} 원</div>
         <div class="regular-price-frame">{{ formatPrice(price) }}원</div>
@@ -86,7 +86,6 @@ defineProps<{
   font-size: 14px;
   color: var(--color-text-tertiary, #481c15);
   font-family: NanumSquare, sans-serif;
-  font-weight: 800;
 }
 
 .regular-price-frame {
@@ -102,13 +101,14 @@ defineProps<{
   gap: 50px;
   font-size: 14px;
   color: var(--color-text-tertiary, #481c15);
-  font-weight: 800;
   white-space: nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .category-frame {
   display: flex;
   gap: 5px;
+  height: auto;
 }
 </style>
