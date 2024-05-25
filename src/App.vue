@@ -1,15 +1,12 @@
 <template>
-  <BaseComponents />
+  <RouterView/>
 </template>
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import BaseComponents from "@/BaseComponents.vue";
 
 @Options({
-  components: {
-    BaseComponents,
-  },
+  components: {},
 })
 export default class App extends Vue {
 }
