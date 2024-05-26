@@ -1,14 +1,14 @@
 import {createMemoryHistory, createRouter, createWebHistory} from 'vue-router';
-import LoginView from "@/views/login/LoginView.vue";
 import BaseComponents from "@/components/BaseComponents.vue";
-import HomeView from "@/views/home/HomeView.vue";
-import LoginHandler from "@/views/login/LoginHandler.vue";
+import HomePage from "@/pages/home/HomePage.vue";
+import LoginPage from "@/pages/login/LoginPage.vue";
+import LoginHandlerPage from "@/pages/login/LoginHandlerPage.vue";
 
 const routes = [
-    { path: '/', component: HomeView },
+    { path: '/', component: HomePage },
     { path: '/components', component: BaseComponents },
-    { path: '/login', component: LoginView },
-    { path: '/login/oauth2/callback', component: LoginHandler }
+    { path: '/login', component: LoginPage },
+    { path: '/login/oauth2/callback', component: LoginHandlerPage }
 ]
 
 export const router = createRouter({

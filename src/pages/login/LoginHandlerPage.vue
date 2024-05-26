@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {onMounted} from "vue";
 import axios from "axios";
-import {ClientProvider} from "@/views/login/ClientProvider";
+import {ClientProvider} from "@/pages/login/ClientProvider";
 import {useRouter} from "vue-router";
 
 type RoleType = "USER" | "AUTHOR" | "ADMIN";
