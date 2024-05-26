@@ -1,0 +1,1 @@
+export type ClientProvider = 'kakao' | 'google' | 'naver';
